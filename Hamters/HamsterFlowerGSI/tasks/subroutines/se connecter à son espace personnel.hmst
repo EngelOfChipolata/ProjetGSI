@@ -4,32 +4,32 @@
     <nodes>
         <task copy="false" critical="0" folded="false" help="" id="1" iterative="false" maxexectime="0" minexectime="0" name="se connecter à son espace personnel" nb_iteration="0" optional="false" type="subroutine" x="488" y="39">
             <operator id="18" knowledgeproceduraltype="" type="enable" x="585" y="119">
-                <task copy="false" critical="0" folded="false" help="" id="15" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="valider la saisie" nb_iteration="0" optional="false" type="abstractuser" x="678" y="199">
-                    <operator id="19" knowledgeproceduraltype="" type="choice" x="714" y="279">
-                        <task copy="false" critical="0" folded="false" help="" id="21" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="cliquer sur &quot;valider&quot;" nb_iteration="0" optional="false" type="input" x="815" y="359"/>
-                        <task copy="false" critical="0" folded="false" help="" id="20" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="taper sur la touche entrée" nb_iteration="0" optional="false" type="input" x="649" y="359"/>
-                    </operator>
-                </task>
                 <task copy="false" critical="0" folded="false" help="" id="16" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="renseigner les informations de connection" nb_iteration="0" optional="false" type="abstractuser" x="420" y="199">
                     <operator id="17" knowledgeproceduraltype="" type="order_independent" x="529" y="279">
                         <task copy="false" critical="0" folded="false" help="" id="3" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="renseigner l'identifiant" nb_iteration="0" optional="false" type="abstractuser" x="324" y="359">
                             <operator id="6" knowledgeproceduraltype="" type="enable" x="377" y="439">
-                                <task copy="false" critical="0" folded="false" help="" id="12" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="confirmer l'identifiant" nb_iteration="0" optional="false" type="cognitive" x="311" y="519"/>
-                                <task copy="false" critical="0" folded="false" help="" id="5" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="se rappeler de son identifiant" nb_iteration="0" optional="false" type="cognitive" x="-151" y="519"/>
                                 <task copy="false" critical="0" folded="false" help="" id="22" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="mettre le focus sur l'entrée identifiant" nb_iteration="0" optional="false" type="input" x="-378" y="519"/>
+                                <task copy="false" critical="0" folded="false" help="" id="5" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="se rappeler de son identifiant" nb_iteration="0" optional="false" type="cognitive" x="-151" y="519"/>
                                 <task copy="false" critical="0" folded="false" help="" id="7" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="taper l'identifiant" nb_iteration="0" optional="false" type="input" x="35" y="519"/>
                                 <task copy="false" critical="0" folded="false" help="" id="11" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="regarder l'identifiant tapé" nb_iteration="0" optional="false" type="perceptive" x="150" y="519"/>
+                                <task copy="false" critical="0" folded="false" help="" id="12" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="confirmer l'identifiant" nb_iteration="0" optional="false" type="cognitive" x="311" y="519"/>
                             </operator>
                         </task>
                         <task copy="false" critical="0" folded="false" help="" id="4" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="renseigner le mot de passe" nb_iteration="0" optional="false" type="abstractuser" x="471" y="359">
                             <operator id="10" knowledgeproceduraltype="" type="enable" x="540" y="439">
-                                <task copy="false" critical="0" folded="false" help="" id="8" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="se rappeler de son mot de passe" nb_iteration="0" optional="false" type="cognitive" x="677" y="519"/>
-                                <task copy="false" critical="0" folded="false" help="" id="13" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="regarder le mot de passe tapé" nb_iteration="0" optional="false" type="perceptive" x="1032" y="519"/>
-                                <task copy="false" critical="0" folded="false" help="" id="9" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="taper le mot de passe" nb_iteration="0" optional="false" type="input" x="886" y="519"/>
-                                <task copy="false" critical="0" folded="false" help="" id="14" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="confirmer le mot de passe" nb_iteration="0" optional="false" type="cognitive" x="1224" y="519"/>
                                 <task copy="false" critical="0" folded="false" help="" id="23" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="mettre le focus sur l'entrée identifiant" nb_iteration="0" optional="false" type="input" x="450" y="519"/>
+                                <task copy="false" critical="0" folded="false" help="" id="8" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="se rappeler de son mot de passe" nb_iteration="0" optional="false" type="cognitive" x="677" y="519"/>
+                                <task copy="false" critical="0" folded="false" help="" id="9" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="taper le mot de passe" nb_iteration="0" optional="false" type="input" x="886" y="519"/>
+                                <task copy="false" critical="0" folded="false" help="" id="13" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="regarder le mot de passe tapé" nb_iteration="0" optional="false" type="perceptive" x="1032" y="519"/>
+                                <task copy="false" critical="0" folded="false" help="" id="14" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="confirmer le mot de passe" nb_iteration="0" optional="false" type="cognitive" x="1224" y="519"/>
                             </operator>
                         </task>
+                    </operator>
+                </task>
+                <task copy="false" critical="0" folded="false" help="" id="15" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="valider la saisie" nb_iteration="0" optional="false" type="abstractuser" x="678" y="199">
+                    <operator id="19" knowledgeproceduraltype="" type="choice" x="714" y="279">
+                        <task copy="false" critical="0" folded="false" help="" id="20" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="taper sur la touche entrée" nb_iteration="0" optional="false" type="input" x="649" y="359"/>
+                        <task copy="false" critical="0" folded="false" help="" id="21" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="cliquer sur &quot;valider&quot;" nb_iteration="0" optional="false" type="input" x="815" y="359"/>
                     </operator>
                 </task>
             </operator>
