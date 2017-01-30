@@ -1,11 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <hamsters version="4">
-    <colors applicationcolor="-11141309" declarativecolor="-1854465" devicecolor="-8879105" inputdevicecolor="-8879105" objectcolor="-14336" outputdevicecolor="-8879105" physicalobjectcolor="-14336" situationalcolor="-3290107" strategiccolor="-4136705" timeccolor="-105247"/>
+    <colors applicationcolor="-11141309" declarativecolor="-1854465" devicecolor="-8879105" inputdevicecolor="-8879105" objectcolor="-14336" outputdevicecolor="-8879105" physicalobjectcolor="-14336" situationalcolor="-3290107" strategiccolor="-4136705"/>
     <nodes>
-        <task copy="false" critical="0" folded="false" help="" id="1" iterative="false" maxexectime="0" minexectime="0" name="Commander un bouquet" nb_iteration="0" optional="false" type="abstract" x="528" y="53"/>
-        <task copy="false" critical="0" folded="false" help="" id="2" iterative="false" maxexectime="0" minexectime="0" name="observer les recommandations du site" nb_iteration="0" optional="false" type="abstract" x="163" y="209"/>
-        <task copy="false" critical="0" folded="false" help="" id="3" iterative="false" maxexectime="0" minexectime="0" name="newTaskModel" nb_iteration="0" optional="false" type="abstract" x="599" y="266"/>
-        <task copy="false" critical="0" folded="false" help="" id="4" iterative="false" maxexectime="0" minexectime="0" name="newTaskModel" nb_iteration="0" optional="false" type="abstract" x="985" y="127"/>
+        <task copy="false" critical="0" folded="false" help="" id="3" iterative="false" maxexectime="0" minexectime="0" name="Choisir un bouquet" nb_iteration="0" optional="false" type="abstract" x="470" y="167">
+            <operator id="10" knowledgeproceduraltype="" type="enable" x="515" y="247">
+                <task copy="false" critical="0" folded="false" help="" id="6" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Présenter les recommandations les plus pertinentes" nb_iteration="0" optional="false" type="output" x="114" y="327"/>
+                <task copy="false" critical="0" folded="false" help="" id="8" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Se souvenir de ce qu'on cherche" nb_iteration="0" optional="false" type="cognitive" x="430" y="327"/>
+                <task copy="false" critical="0" folded="false" help="" id="11" iterative="true" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Explorer les recommandations" nb_iteration="0" optional="false" type="abstract" x="634" y="327">
+                    <operator id="15" knowledgeproceduraltype="" type="order_independent" x="711" y="407">
+                        <task copy="false" critical="0" folded="false" help="" id="12" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Overview" nb_iteration="0" optional="false" type="interactive" x="374" y="487">
+                            <operator id="16" knowledgeproceduraltype="" type="enable" x="391" y="567">
+                                <task copy="false" critical="0" folded="false" help="" id="7" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Visualiser les recommandations" nb_iteration="0" optional="false" type="perceptive" x="0" y="647"/>
+                                <task copy="false" critical="0" folded="false" help="" id="17" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Scroller la page" nb_iteration="0" optional="false" type="input" x="205" y="647"/>
+                            </operator>
+                        </task>
+                        <task copy="false" critical="0" folded="false" help="" id="19" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Filtrer par catégorie " nb_iteration="0" optional="true" type="abstract" x="449" y="487">
+                            <operator id="22" knowledgeproceduraltype="" type="choice" x="496" y="567">
+                                <task copy="false" critical="0" folded="false" help="" id="20" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="catégorie 1" nb_iteration="0" optional="false" type="input" x="317" y="647"/>
+                                <task copy="false" critical="0" folded="false" help="" id="21" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="catégorie 2" nb_iteration="0" optional="false" type="input" x="404" y="647"/>
+                            </operator>
+                        </task>
+                        <task copy="false" critical="0" folded="false" help="" id="14" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Details on demand" nb_iteration="0" optional="true" type="interactive" x="584" y="487">
+                            <operator id="29" knowledgeproceduraltype="" type="enable" x="629" y="567">
+                                <task copy="false" critical="0" folded="false" help="" id="25" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Visualiser Item" nb_iteration="0" optional="false" type="perceptive" x="491" y="647"/>
+                                <task copy="false" critical="0" folded="false" help="" id="24" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Sélectionner détails item" nb_iteration="0" optional="false" type="input" x="599" y="647"/>
+                                <task copy="false" critical="0" folded="false" help="" id="26" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Présenter détails item" nb_iteration="0" optional="false" type="output" x="761" y="647"/>
+                                <task copy="false" critical="0" folded="false" help="" id="27" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Visualiser détails item" nb_iteration="0" optional="false" type="perceptive" x="908" y="647"/>
+                                <task copy="false" critical="0" folded="false" help="" id="28" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="quitter les détails" nb_iteration="0" optional="true" type="input" x="1056" y="647"/>
+                            </operator>
+                        </task>
+                    </operator>
+                </task>
+                <task copy="false" critical="0" folded="false" help="" id="31" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Choisir le bouquet" nb_iteration="0" optional="false" type="abstract" x="829" y="327">
+                    <operator id="33" knowledgeproceduraltype="" type="enable" x="872" y="407">
+                        <task copy="false" critical="0" folded="false" help="" id="23" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Ajouter le bouquet voulu au panier" nb_iteration="0" optional="false" type="input" x="715" y="487"/>
+                        <task copy="false" critical="0" folded="false" help="" id="30" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Montrer l'ajout du bouquet dans le panier" nb_iteration="0" optional="false" type="output" x="927" y="487"/>
+                        <task copy="false" critical="0" folded="false" help="" id="32" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Vérifier que la commande a bien été ajoutée" nb_iteration="0" optional="false" type="perceptive" x="1176" y="487"/>
+                    </operator>
+                </task>
+            </operator>
+        </task>
     </nodes>
     <datas/>
     <errors/>
