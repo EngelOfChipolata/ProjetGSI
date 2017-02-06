@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hamsters version="4">
+    <colors applicationcolor="-11141309" declarativecolor="-1854465" devicecolor="-8879105" inputdevicecolor="-8879105" objectcolor="-14336" outputdevicecolor="-8879105" physicalobjectcolor="-14336" situationalcolor="-3290107" strategiccolor="-4136705"/>
+    <nodes>
+        <task copy="false" critical="0" folded="false" help="" id="1" iterative="false" maxexectime="0" minexectime="0" name="Explorer les résultats" nb_iteration="0" optional="false" type="subroutine" x="634" y="327">
+            <operator id="15" knowledgeproceduraltype="" type="order_independent" x="695" y="407">
+                <task copy="false" critical="0" folded="false" help="" id="12" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Overview" nb_iteration="0" optional="false" type="interactive" x="545" y="487">
+                    <operator id="16" knowledgeproceduraltype="" type="enable" x="562" y="567">
+                        <task copy="false" critical="0" folded="false" help="" id="7" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Visualiser les résultats" nb_iteration="0" optional="false" type="perceptive" x="-124" y="647"/>
+                        <task copy="false" critical="0" folded="false" help="" id="17" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Scroller la page" nb_iteration="0" optional="false" type="input" x="28" y="647"/>
+                    </operator>
+                </task>
+                <task copy="false" critical="0" folded="false" help="" id="14" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Details on demand" nb_iteration="0" optional="true" type="interactive" x="755" y="487">
+                    <operator id="29" knowledgeproceduraltype="" type="enable" x="800" y="567">
+                        <task copy="false" critical="0" folded="false" help="" id="25" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Visualiser Item" nb_iteration="0" optional="false" type="perceptive" x="859" y="647"/>
+                        <task copy="false" critical="0" folded="false" help="" id="24" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Sélectionner détails item" nb_iteration="0" optional="false" type="input" x="967" y="647"/>
+                        <task copy="false" critical="0" folded="false" help="" id="26" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Présenter détails item" nb_iteration="0" optional="false" type="output" x="1129" y="647"/>
+                        <task copy="false" critical="0" folded="false" help="" id="27" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Visualiser détails item" nb_iteration="0" optional="false" type="perceptive" x="1276" y="647"/>
+                        <task copy="false" critical="0" folded="false" help="" id="28" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="quitter les détails" nb_iteration="0" optional="true" type="input" x="1424" y="647"/>
+                    </operator>
+                </task>
+                <task copy="false" critical="0" folded="false" help="" id="30" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Filtrer par catégorie" nb_iteration="0" optional="true" type="interactive" x="637" y="487">
+                    <operator id="32" knowledgeproceduraltype="" type="enable" x="674" y="587">
+                        <task copy="false" critical="0" folded="false" help="" id="19" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Choisir une catégorie " nb_iteration="0" optional="false" subtree="Choisir une catégorie " type="subroutine" x="602" y="648"/>
+                    </operator>
+                </task>
+            </operator>
+        </task>
+        <task copy="false" critical="0" folded="false" help="" id="31" iterative="false" maxexectime="0" minexectime="0" name="Automne" nb_iteration="0" optional="false" type="input" x="0" y="0"/>
+    </nodes>
+    <datas>
+        <data name="Caractéristiques souhaitées" oldname="" type="Strategic" x="875" y="397">
+            <link feature="none" sourceid="1" type="Access" value=""/>
+            <link feature="none" sourceid="19" type="Access" value=""/>
+            <link feature="none" sourceid="14" type="Access" value=""/>
+        </data>
+        <data name="Résultats" oldname="Résultats" type="Information" x="536" y="826">
+            <link feature="none" sourceid="7" type="Access" value=""/>
+            <link feature="none" sourceid="17" type="Access" value=""/>
+            <link feature="none" sourceid="25" type="Access" value=""/>
+            <link feature="none" sourceid="26" type="Access" value=""/>
+            <link feature="none" sourceid="27" type="Access" value=""/>
+            <link feature="none" sourceid="28" type="Access" value=""/>
+            <link feature="none" sourceid="24" type="Access" value=""/>
+        </data>
+    </datas>
+    <errors/>
+    <parameters/>
+</hamsters>
