@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hamsters version="4">
+    <colors applicationcolor="-11141309" declarativecolor="-1854465" devicecolor="-8879105" inputdevicecolor="-8879105" objectcolor="-14336" outputdevicecolor="-8879105" physicalobjectcolor="-14336" situationalcolor="-3290107" strategiccolor="-4136705" timeccolor="-105247"/>
+    <nodes>
+        <task copy="false" critical="0" folded="false" help="" id="1" iterative="false" maxexectime="0" minexectime="0" name="Creer un espace perso" nb_iteration="0" optional="false" type="subroutine" x="1002" y="-157">
+            <operator id="5" knowledgeproceduraltype="" type="enable" x="1058" y="-77">
+                <task copy="false" critical="0" folded="false" help="" id="2" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Entrer les informations personnelles" nb_iteration="0" optional="false" type="abstractuser" x="815" y="3">
+                    <operator id="12" knowledgeproceduraltype="" type="order_independent" x="908" y="83">
+                        <task copy="false" critical="0" folded="false" help="" id="13" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Remplir entrée nom" nb_iteration="0" optional="false" type="abstractuser" x="147" y="163">
+                            <operator id="6" knowledgeproceduraltype="" type="enable" x="195" y="243">
+                                <task copy="false" critical="0" folded="false" help="" id="8" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Mettre le focus sur l'entrée nom" nb_iteration="0" optional="false" type="input" x="-1311" y="323"/>
+                                <task copy="false" critical="0" folded="false" help="" id="7" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Se remémorer son nom" nb_iteration="0" optional="false" type="cognitive" x="-1114" y="323"/>
+                                <task copy="false" critical="0" folded="false" help="" id="9" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Entrer son nom" nb_iteration="0" optional="false" type="input" x="-956" y="323"/>
+                                <task copy="false" critical="0" folded="false" help="" id="10" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Regarder ce qui a été taper" nb_iteration="0" optional="false" type="perceptive" x="-845" y="323"/>
+                                <task copy="false" critical="0" folded="false" help="" id="11" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Confirmer" nb_iteration="0" optional="false" type="cognitive" x="-670" y="323"/>
+                            </operator>
+                        </task>
+                        <task copy="false" critical="0" folded="false" help="" id="14" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Remplir entrée prénom" nb_iteration="0" optional="false" type="abstractuser" x="283" y="163">
+                            <operator id="15" knowledgeproceduraltype="" type="enable" x="340" y="243">
+                                <task copy="false" critical="0" folded="false" help="" id="16" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Mettre le focus sur l'entrée prénom" nb_iteration="0" optional="false" type="input" x="-589" y="323"/>
+                                <task copy="false" critical="0" folded="false" help="" id="17" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Se remémorer son prénom" nb_iteration="0" optional="false" type="cognitive" x="-374" y="323"/>
+                                <task copy="false" critical="0" folded="false" help="" id="18" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Entrer son prénom" nb_iteration="0" optional="false" type="input" x="-198" y="323"/>
+                                <task copy="false" critical="0" folded="false" help="" id="19" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Regarder ce qui a été taper" nb_iteration="0" optional="false" type="perceptive" x="-69" y="323"/>
+                                <task copy="false" critical="0" folded="false" help="" id="20" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Confirmer" nb_iteration="0" optional="false" type="cognitive" x="106" y="323"/>
+                            </operator>
+                        </task>
+                        <task copy="false" critical="0" folded="false" help="" id="28" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Remplir entrée mot de passe" nb_iteration="0" optional="false" type="abstractuser" x="437" y="163">
+                            <operator id="29" knowledgeproceduraltype="" type="enable" x="510" y="243">
+                                <task copy="false" critical="0" folded="false" help="" id="30" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Mettre le focus sur l'entrée mot de passe" nb_iteration="0" optional="false" type="input" x="187" y="323"/>
+                                <task copy="false" critical="0" folded="false" help="" id="31" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="choisir un mot de passe" nb_iteration="0" optional="false" type="cognitive" x="435" y="323"/>
+                                <task copy="false" critical="0" folded="false" help="" id="32" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Entrer le mot de passe choisi" nb_iteration="0" optional="false" type="input" x="594" y="323"/>
+                            </operator>
+                        </task>
+                        <task copy="false" critical="0" folded="false" help="" id="21" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Remplir entrée email" nb_iteration="0" optional="false" type="abstractuser" x="624" y="163">
+                            <operator id="22" knowledgeproceduraltype="" type="enable" x="675" y="243">
+                                <task copy="false" critical="0" folded="false" help="" id="23" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Mettre le focus sur l'entrée email" nb_iteration="0" optional="false" type="input" x="781" y="323"/>
+                                <task copy="false" critical="0" folded="false" help="" id="24" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Se remémorer son email" nb_iteration="0" optional="false" type="cognitive" x="984" y="323"/>
+                                <task copy="false" critical="0" folded="false" help="" id="25" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Entrer son email" nb_iteration="0" optional="false" type="input" x="1148" y="323"/>
+                                <task copy="false" critical="0" folded="false" help="" id="26" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Regarder ce qui a été taper" nb_iteration="0" optional="false" type="perceptive" x="1265" y="323"/>
+                                <task copy="false" critical="0" folded="false" help="" id="27" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Confirmer" nb_iteration="0" optional="false" type="cognitive" x="1440" y="323"/>
+                            </operator>
+                        </task>
+                    </operator>
+                </task>
+                <task copy="false" critical="0" folded="false" help="" id="3" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Envoyer les information" nb_iteration="0" optional="false" type="abstractuser" x="1042" y="3">
+                    <operator id="33" knowledgeproceduraltype="" type="choice" x="1099" y="83">
+                        <task copy="false" critical="0" folded="false" help="" id="34" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Appuyer sur entrée" nb_iteration="0" optional="false" type="input" x="766" y="163"/>
+                        <task copy="false" critical="0" folded="false" help="" id="35" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Cliquer sur valider" nb_iteration="0" optional="false" type="input" x="895" y="163"/>
+                    </operator>
+                </task>
+                <task copy="false" critical="0" folded="false" help="" id="4" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Confirmation par mail" nb_iteration="0" optional="false" type="abstractuser" x="1196" y="3">
+                    <operator id="36" knowledgeproceduraltype="" type="enable" x="1248" y="83">
+                        <task copy="false" critical="0" folded="false" help="" id="39" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Consulter sa boite mail" nb_iteration="0" optional="false" type="abstractuser" x="1021" y="163"/>
+                        <task copy="false" critical="0" folded="false" help="" id="40" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Identifier le mail reçu" nb_iteration="0" optional="false" type="abstractuser" x="1175" y="163"/>
+                        <task copy="false" critical="0" folded="false" help="" id="44" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Cliquer sur le lien de confirmation" nb_iteration="0" optional="false" type="input" x="1315" y="163"/>
+                        <task copy="false" critical="0" folded="false" help="" id="41" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Ouvrir le mail" nb_iteration="0" optional="false" type="input" x="1526" y="163"/>
+                        <task copy="false" critical="0" folded="false" help="" id="42" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Lire le mail" nb_iteration="0" optional="false" type="perceptive" x="1624" y="163"/>
+                        <task copy="false" critical="0" folded="false" help="" id="43" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="identifier la procédure de confirmation" nb_iteration="0" optional="false" type="perceptive" x="1711" y="163"/>
+                        <task copy="false" critical="0" folded="false" help="" id="45" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Vérifier que la confirmation est bien effectuée" nb_iteration="0" optional="false" type="cognitive" x="1944" y="163"/>
+                    </operator>
+                </task>
+            </operator>
+        </task>
+    </nodes>
+    <datas/>
+    <errors/>
+    <parameters/>
+</hamsters>

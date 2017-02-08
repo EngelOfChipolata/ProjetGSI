@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hamsters version="4">
+    <colors applicationcolor="-11141309" declarativecolor="-1854465" devicecolor="-8879105" inputdevicecolor="-8879105" objectcolor="-14336" outputdevicecolor="-8879105" physicalobjectcolor="-14336" situationalcolor="-3290107" strategiccolor="-4136705"/>
+    <nodes>
+        <task copy="false" critical="0" folded="false" help="" id="1" iterative="false" maxexectime="0" minexectime="0" name="Choisir une catégorie " nb_iteration="0" optional="false" type="subroutine" x="620" y="487">
+            <operator id="22" knowledgeproceduraltype="" type="choice" x="683" y="567">
+                <task copy="false" critical="0" folded="false" help="" id="34" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Saisons" nb_iteration="0" optional="false" type="interactive" x="294" y="647">
+                    <operator id="36" knowledgeproceduraltype="" type="choice" x="310" y="727">
+                        <task copy="false" critical="0" folded="false" help="" id="37" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Printemps" nb_iteration="0" optional="false" type="input" x="-2052" y="807"/>
+                        <task copy="false" critical="0" folded="false" help="" id="38" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Eté" nb_iteration="0" optional="false" type="input" x="-1969" y="807"/>
+                        <task copy="false" critical="0" folded="false" help="" id="39" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Automne" nb_iteration="0" optional="false" type="input" x="-1910" y="807"/>
+                        <task copy="false" critical="0" folded="false" help="" id="40" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Hiver" nb_iteration="0" optional="false" type="input" x="-1835" y="807"/>
+                    </operator>
+                </task>
+                <task copy="false" critical="0" folded="false" help="" id="35" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Origine" nb_iteration="0" optional="false" type="interactive" x="366" y="647">
+                    <operator id="47" knowledgeproceduraltype="" type="choice" x="379" y="727">
+                        <task copy="false" critical="0" folded="false" help="" id="46" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Asie" nb_iteration="0" optional="false" type="input" x="-1776" y="807"/>
+                        <task copy="false" critical="0" folded="false" help="" id="41" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Amériques" nb_iteration="0" optional="false" type="input" x="-1717" y="807"/>
+                        <task copy="false" critical="0" folded="false" help="" id="42" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Afrique" nb_iteration="0" optional="false" type="input" x="-1631" y="807"/>
+                        <task copy="false" critical="0" folded="false" help="" id="44" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Europe" nb_iteration="0" optional="false" type="input" x="-1567" y="807"/>
+                        <task copy="false" critical="0" folded="false" help="" id="45" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Exotique" nb_iteration="0" optional="false" type="input" x="-1501" y="807"/>
+                        <task copy="false" critical="0" folded="false" help="" id="43" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Océanie" nb_iteration="0" optional="false" type="input" x="-1428" y="807"/>
+                    </operator>
+                </task>
+                <task copy="false" critical="0" folded="false" help="" id="33" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Evènements" nb_iteration="0" optional="false" type="interactive" x="432" y="647">
+                    <operator id="48" knowledgeproceduraltype="" type="choice" x="459" y="727">
+                        <task copy="false" critical="0" folded="false" help="" id="49" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Mariage" nb_iteration="0" optional="false" type="input" x="-1356" y="807"/>
+                        <task copy="false" critical="0" folded="false" help="" id="50" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Fête des mères" nb_iteration="0" optional="false" type="input" x="-1286" y="807"/>
+                        <task copy="false" critical="0" folded="false" help="" id="55" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Premier Rendez-vous" nb_iteration="0" optional="false" type="input" x="-1173" y="807"/>
+                        <task copy="false" critical="0" folded="false" help="" id="52" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Saint-Valentin" nb_iteration="0" optional="false" type="input" x="-1028" y="807"/>
+                        <task copy="false" critical="0" folded="false" help="" id="53" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Noël" nb_iteration="0" optional="false" type="input" x="-926" y="807"/>
+                        <task copy="false" critical="0" folded="false" help="" id="51" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Fête des pères" nb_iteration="0" optional="false" type="input" x="-867" y="807"/>
+                        <task copy="false" critical="0" folded="false" help="" id="54" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Ascension" nb_iteration="0" optional="false" type="input" x="-758" y="807"/>
+                    </operator>
+                </task>
+                <task copy="false" critical="0" folded="false" help="" id="32" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Destinataires" nb_iteration="0" optional="false" type="interactive" x="527" y="647">
+                    <operator id="56" knowledgeproceduraltype="" type="choice" x="557" y="727">
+                        <task copy="false" critical="0" folded="false" help="" id="62" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Conjointe" nb_iteration="0" optional="false" type="input" x="-674" y="807"/>
+                        <task copy="false" critical="0" folded="false" help="" id="58" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Parents" nb_iteration="0" optional="false" type="input" x="-595" y="807"/>
+                        <task copy="false" critical="0" folded="false" help="" id="59" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Grands Parents" nb_iteration="0" optional="false" type="input" x="-526" y="807"/>
+                        <task copy="false" critical="0" folded="false" help="" id="61" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Beaux Parents" nb_iteration="0" optional="false" type="input" x="-413" y="807"/>
+                        <task copy="false" critical="0" folded="false" help="" id="60" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Conjoint" nb_iteration="0" optional="false" type="input" x="-307" y="807"/>
+                    </operator>
+                </task>
+                <task copy="false" critical="0" folded="false" help="" id="30" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Bons Plans" nb_iteration="0" optional="false" type="interactive" x="627" y="647">
+                    <operator id="64" knowledgeproceduraltype="" type="choice" x="652" y="727">
+                        <task copy="false" critical="0" folded="false" help="" id="63" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Valeur sûre" nb_iteration="0" optional="false" type="input" x="-235" y="807"/>
+                        <task copy="false" critical="0" folded="false" help="" id="65" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Recommandations" nb_iteration="0" optional="false" type="input" x="-146" y="807"/>
+                        <task copy="false" critical="0" folded="false" help="" id="66" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Petits prix" nb_iteration="0" optional="false" type="input" x="-14" y="807"/>
+                    </operator>
+                </task>
+                <task copy="false" critical="0" folded="false" help="" id="20" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Compositions" nb_iteration="0" optional="false" type="interactive" x="717" y="647">
+                    <operator id="67" knowledgeproceduraltype="" type="choice" x="749" y="727">
+                        <task copy="false" critical="0" folded="false" help="" id="68" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="En pot" nb_iteration="0" optional="false" type="input" x="65" y="807"/>
+                        <task copy="false" critical="0" folded="false" help="" id="69" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="A la coupe" nb_iteration="0" optional="false" type="input" x="126" y="807"/>
+                        <task copy="false" critical="0" folded="false" help="" id="70" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Arrangements" nb_iteration="0" optional="false" type="input" x="209" y="807"/>
+                    </operator>
+                </task>
+                <task copy="false" critical="0" folded="false" help="" id="31" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Espèce" nb_iteration="0" optional="false" type="interactive" x="821" y="647">
+                    <operator id="73" knowledgeproceduraltype="" type="choice" x="835" y="727">
+                        <task copy="false" critical="0" folded="false" help="" id="71" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Roses" nb_iteration="0" optional="false" type="input" x="313" y="807"/>
+                        <task copy="false" critical="0" folded="false" help="" id="76" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Bonzaï" nb_iteration="0" optional="false" type="input" x="376" y="807"/>
+                        <task copy="false" critical="0" folded="false" help="" id="72" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Tulipes" nb_iteration="0" optional="false" type="input" x="439" y="807"/>
+                        <task copy="false" critical="0" folded="false" help="" id="75" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Orchidées" nb_iteration="0" optional="false" type="input" x="506" y="807"/>
+                        <task copy="false" critical="0" folded="false" help="" id="77" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Lys" nb_iteration="0" optional="false" type="input" x="589" y="807"/>
+                        <task copy="false" critical="0" folded="false" help="" id="74" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Jonquilles" nb_iteration="0" optional="false" type="input" x="648" y="807"/>
+                    </operator>
+                </task>
+                <task copy="false" critical="0" folded="false" help="" id="57" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Demandes Spéciales" nb_iteration="0" optional="false" type="interactive" x="889" y="647">
+                    <operator id="78" knowledgeproceduraltype="" type="choice" x="942" y="727">
+                        <task copy="false" critical="0" folded="false" help="" id="79" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Synthétiques" nb_iteration="0" optional="false" type="input" x="731" y="807"/>
+                        <task copy="false" critical="0" folded="false" help="" id="83" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Sans odeur" nb_iteration="0" optional="false" type="input" x="828" y="807"/>
+                        <task copy="false" critical="0" folded="false" help="" id="81" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Wearables" nb_iteration="0" optional="false" type="input" x="918" y="807"/>
+                        <task copy="false" critical="0" folded="false" help="" id="80" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Non allergènes" nb_iteration="0" optional="false" type="input" x="1004" y="807"/>
+                        <task copy="false" critical="0" folded="false" help="" id="82" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Comestibles" nb_iteration="0" optional="false" type="input" x="1115" y="807"/>
+                    </operator>
+                </task>
+                <task copy="false" critical="0" folded="false" help="" id="21" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Couleurs" nb_iteration="0" optional="false" type="interactive" x="1035" y="647">
+                    <operator id="84" knowledgeproceduraltype="" type="choice" x="1053" y="727">
+                        <task copy="false" critical="0" folded="false" help="" id="88" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Vert" nb_iteration="0" optional="false" type="input" x="1212" y="807"/>
+                        <task copy="false" critical="0" folded="false" help="" id="85" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Rouge" nb_iteration="0" optional="false" type="input" x="1271" y="807"/>
+                        <task copy="false" critical="0" folded="false" help="" id="89" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Violet" nb_iteration="0" optional="false" type="input" x="1334" y="807"/>
+                        <task copy="false" critical="0" folded="false" help="" id="86" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Blanc" nb_iteration="0" optional="false" type="input" x="1393" y="807"/>
+                        <task copy="false" critical="0" folded="false" help="" id="87" iterative="false" knowledgeproceduraltype="" maxexectime="0" minexectime="0" name="Jaune" nb_iteration="0" optional="false" type="input" x="1452" y="807"/>
+                    </operator>
+                </task>
+            </operator>
+        </task>
+    </nodes>
+    <datas/>
+    <errors/>
+    <parameters/>
+</hamsters>
