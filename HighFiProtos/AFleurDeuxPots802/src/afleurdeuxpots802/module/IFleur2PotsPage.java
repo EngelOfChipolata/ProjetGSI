@@ -9,6 +9,7 @@ package afleurdeuxpots802.module;
  *
  * @author buisangu
  */
-public abstract class AFleur2PotsPage {
-    public void ShowWindow
+public interface IFleur2PotsPage {
+    public void ShowWindow();
+    public void HideWindow();
 }
