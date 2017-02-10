@@ -9,13 +9,27 @@ package afleurdeuxpots802.pages.accueil;
  *
  * @author desertle
  */
+
+
 public class AccueilPage extends javax.swing.JFrame {
+
+    private void init() {
+        state = States.RUBAN_1;
+        bouttonRuban1.setEnabled(false);
+        bouttonRuban2.setEnabled(true);
+        bouttonRuban3.setEnabled(true);
+        bouttonRuban4.setEnabled(true);
+    }
 
     /**
      * Creates new form AcceuilPage
      */
+    
+    private enum States {RUBAN_1,RUBAN_2, RUBAN_3, RUBAN_4 };
+    private States state;
     public AccueilPage() {
         initComponents();
+        init();
     }
 
     /**
@@ -27,21 +41,123 @@ public class AccueilPage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonPrecedent = new javax.swing.JButton();
+        buttonPrecedent1 = new javax.swing.JButton();
+        imageRuban = new javax.swing.JLabel();
+        bouttonRuban1 = new javax.swing.JButton();
+        bouttonRuban2 = new javax.swing.JButton();
+        bouttonRuban3 = new javax.swing.JButton();
+        bouttonRuban4 = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        buttonPrecedent.setText("<<");
+        buttonPrecedent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonPrecedentActionPerformed(evt);
+            }
+        });
+
+        buttonPrecedent1.setText(">>");
+        buttonPrecedent1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonPrecedent1ActionPerformed(evt);
+            }
+        });
+
+        imageRuban.setText("Image");
+
+        bouttonRuban1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bouttonRuban1ActionPerformed(evt);
+            }
+        });
+
+        bouttonRuban2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bouttonRuban2ActionPerformed(evt);
+            }
+        });
+
+        bouttonRuban3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bouttonRuban3ActionPerformed(evt);
+            }
+        });
+
+        bouttonRuban4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bouttonRuban4ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(buttonPrecedent)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(imageRuban, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(buttonPrecedent1))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(659, Short.MAX_VALUE)
+                .addComponent(bouttonRuban1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(bouttonRuban2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(bouttonRuban3, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(bouttonRuban4, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(316, 316, 316))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(94, 94, 94)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(buttonPrecedent, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(buttonPrecedent1, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(imageRuban, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(bouttonRuban1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(bouttonRuban3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(bouttonRuban4, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(bouttonRuban2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(466, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void bouttonRuban1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bouttonRuban1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bouttonRuban1ActionPerformed
+
+    private void bouttonRuban2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bouttonRuban2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bouttonRuban2ActionPerformed
+
+    private void bouttonRuban3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bouttonRuban3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bouttonRuban3ActionPerformed
+
+    private void bouttonRuban4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bouttonRuban4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bouttonRuban4ActionPerformed
+
+    private void buttonPrecedentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonPrecedentActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonPrecedentActionPerformed
+
+    private void buttonPrecedent1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonPrecedent1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonPrecedent1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -80,5 +196,12 @@ public class AccueilPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton bouttonRuban1;
+    private javax.swing.JButton bouttonRuban2;
+    private javax.swing.JButton bouttonRuban3;
+    private javax.swing.JButton bouttonRuban4;
+    private javax.swing.JButton buttonPrecedent;
+    private javax.swing.JButton buttonPrecedent1;
+    private javax.swing.JLabel imageRuban;
     // End of variables declaration//GEN-END:variables
 }
