@@ -21,8 +21,8 @@ public class ContentPanel extends javax.swing.JPanel {
      */
     public ContentPanel() {
         initComponents();
-        //nextPageThumbnail.setAsNext();
-        nextPageThumbnail.setAsPrev();
+        nextPageThumbnail.setAsNext();
+        prevPageThumbnail.setAsPrev();
     }
     
     public void setController(Controller controller) {
@@ -30,24 +30,26 @@ public class ContentPanel extends javax.swing.JPanel {
     }
     
     public void setProduct(int i, Product product) {
-        ProductView[] productViews = {productView1, productView2};
+        ProductView[] productViews = {productView1, productView2, productView3, productView4, productView5, productView6, productView7};
         if(i<0 || i>= productViews.length) {
             return;
         }
         ProductView productView = productViews[i];
-        
-        if(product == null) {
-            productView.setVisible(false);
-        } else {
-            productView.setName(product.getName());
+        if(product != null) {
             productView.setImage(product.getImagePath());
+            productView.setName(product.getName());
             productView.setPrice(product.getPrice());
-            productView.setVisible(true);
+        } else {
+            productView.setImage(null);
         }
     }
     
     public void setNextPageThumbnail(int i, Product product) {
         nextPageThumbnail.setThumbnail(i, product);
+    }
+    
+    public void setPrevPageThumbnail(int i, Product product) {
+        prevPageThumbnail.setThumbnail(i, product);
     }
 
     /**
@@ -59,10 +61,38 @@ public class ContentPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        prevPageThumbnail = new afleurdeuxpots802.widgets.PageThumbnail();
         productView1 = new afleurdeuxpots802.widgets.ProductView();
         productView2 = new afleurdeuxpots802.widgets.ProductView();
+        productView3 = new afleurdeuxpots802.widgets.ProductView();
+        productView4 = new afleurdeuxpots802.widgets.ProductView();
+        productView5 = new afleurdeuxpots802.widgets.ProductView();
+        productView6 = new afleurdeuxpots802.widgets.ProductView();
+        productView7 = new afleurdeuxpots802.widgets.ProductView();
         nextPageThumbnail = new afleurdeuxpots802.widgets.PageThumbnail();
 
+        prevPageThumbnail.setPreferredSize(new java.awt.Dimension(160, 180));
+        prevPageThumbnail.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                prevPageThumbnailMouseClicked(evt);
+            }
+        });
+
+        productView1.setPreferredSize(new java.awt.Dimension(160, 180));
+
+        productView2.setPreferredSize(new java.awt.Dimension(160, 180));
+
+        productView3.setPreferredSize(new java.awt.Dimension(160, 180));
+
+        productView4.setPreferredSize(new java.awt.Dimension(160, 180));
+
+        productView5.setPreferredSize(new java.awt.Dimension(160, 180));
+
+        productView6.setPreferredSize(new java.awt.Dimension(160, 180));
+
+        productView7.setPreferredSize(new java.awt.Dimension(160, 180));
+
+        nextPageThumbnail.setPreferredSize(new java.awt.Dimension(160, 180));
         nextPageThumbnail.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 nextPageThumbnailMouseClicked(evt);
@@ -75,38 +105,73 @@ public class ContentPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(productView1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(productView2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(nextPageThumbnail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(111, Short.MAX_VALUE))
+                .addComponent(prevPageThumbnail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(productView1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(productView2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(productView3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(productView4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(productView5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(productView6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(productView7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(nextPageThumbnail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(productView2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(productView1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(nextPageThumbnail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(49, Short.MAX_VALUE))
+                    .addComponent(productView1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(prevPageThumbnail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(productView3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(productView5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(productView6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(nextPageThumbnail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(productView4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(productView7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void nextPageThumbnailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextPageThumbnailMouseClicked
         ViewEvent viewEvent = new ViewEvent(ViewEventType.NEXT_PAGE);
         controller.handleEvent(viewEvent);
-        System.out.println("clicked");
     }//GEN-LAST:event_nextPageThumbnailMouseClicked
+
+    private void prevPageThumbnailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_prevPageThumbnailMouseClicked
+        ViewEvent viewEvent = new ViewEvent(ViewEventType.PREVIOUS_PAGE);
+        controller.handleEvent(viewEvent);
+    }//GEN-LAST:event_prevPageThumbnailMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private afleurdeuxpots802.widgets.PageThumbnail nextPageThumbnail;
+    private afleurdeuxpots802.widgets.PageThumbnail prevPageThumbnail;
     private afleurdeuxpots802.widgets.ProductView productView1;
     private afleurdeuxpots802.widgets.ProductView productView2;
+    private afleurdeuxpots802.widgets.ProductView productView3;
+    private afleurdeuxpots802.widgets.ProductView productView4;
+    private afleurdeuxpots802.widgets.ProductView productView5;
+    private afleurdeuxpots802.widgets.ProductView productView6;
+    private afleurdeuxpots802.widgets.ProductView productView7;
     // End of variables declaration//GEN-END:variables
 
     public void setNextPagesNumber(int nbNextPages) {
@@ -114,7 +179,7 @@ public class ContentPanel extends javax.swing.JPanel {
     }
     
     public void setPrevPageNumber(int nbPrevPages) {
-        //prevPageThumbnail.setPrevPageNumber(nbPrevPages);
+        prevPageThumbnail.setPrevPageNumber(nbPrevPages);
     }
 
 }

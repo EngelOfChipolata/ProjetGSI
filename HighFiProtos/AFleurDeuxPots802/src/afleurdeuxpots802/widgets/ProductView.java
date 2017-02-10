@@ -14,6 +14,7 @@ import javax.swing.JLabel;
  */
 public class ProductView extends javax.swing.JPanel {
 
+    private static final String PATH_NO_IMAGE = "./ressources/noImage.png";
     /**
      * Creates new form ProductView
      */
@@ -87,6 +88,10 @@ public class ProductView extends javax.swing.JPanel {
             ImageIcon icon = new ImageIcon(path);
             imgLabel.setText("");
             imgLabel.setIcon(icon);
+        } else {
+            ImageIcon icon = new ImageIcon(PATH_NO_IMAGE);
+            imgLabel.setText("");
+            imgLabel.setIcon(icon);
         }
         
         
@@ -103,15 +108,6 @@ public class ProductView extends javax.swing.JPanel {
             priceLabel.setText(price + " €");
         }
     }
-    /*
-    @Override
-    public void setVisible(boolean bool) {
-        addToCartButton.setVisible(bool);
-        imagePanel.setVisible(bool);
-        nameLabel.setVisible(bool);
-        nbSpinner.setVisible(bool);
-        priceLabel.setVisible(bool);
-    }*/
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addToCartButton;

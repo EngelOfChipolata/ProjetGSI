@@ -14,7 +14,7 @@ import javax.swing.JLabel;
  * @author fabien
  */
 public class PageThumbnail extends javax.swing.JPanel {
-    
+    private static final String PATH_NO_IMAGE = "./ressources/noImage.png";
     JLabel[] jLabels;
     /**
      * Creates new form PageThumbnail
@@ -151,9 +151,9 @@ public class PageThumbnail extends javax.swing.JPanel {
             ImageIcon icon = new ImageIcon(icon0.getImage().getScaledInstance(40, 40,  java.awt.Image.SCALE_SMOOTH));
             imgLabel.setText("");
             imgLabel.setIcon(icon);
-            setVisible(true);
         } else {
-            setVisible(false);
+            ImageIcon icon0 = new ImageIcon(PATH_NO_IMAGE);
+            ImageIcon icon = new ImageIcon(icon0.getImage().getScaledInstance(40, 40,  java.awt.Image.SCALE_SMOOTH));
         }
         
     }

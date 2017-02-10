@@ -23,7 +23,7 @@ public class Controller {
 
     public Controller(ContentPanel contentPanel) {
         this.contentPanel = contentPanel;
-        NB_ITEMS_IN_PAGE = 2;
+        NB_ITEMS_IN_PAGE = 7;
         init();
     }
     
@@ -85,14 +85,34 @@ public class Controller {
             contentPanel.setProduct(i, product);
         }
         
+        setNextThumbnails();
+        setPrevThumbnails();
+        
+    }
+    
+    private void setNextThumbnails() {
         int nbNextPages = (int) Math.ceil(((double)(products.size() - noFirstProduct - NB_ITEMS_IN_PAGE))/NB_ITEMS_IN_PAGE);
         contentPanel.setNextPagesNumber(nbNextPages);
-        for(int i = 0; i<NB_ITEMS_IN_PAGE; i++) {
+        for(int i = NB_ITEMS_IN_PAGE + noFirstProduct; i<(2*NB_ITEMS_IN_PAGE + noFirstProduct); i++) {
             Product product = null;
-            if(i + NB_ITEMS_IN_PAGE + noFirstProduct < products.size()) {
-                product = products.get(i+ NB_ITEMS_IN_PAGE + noFirstProduct);
-            }
-            contentPanel.setNextPageThumbnail(i, product);
+            try {
+                product = products.get(i);
+            } catch (IndexOutOfBoundsException e) {}
+            
+            contentPanel.setNextPageThumbnail(i - noFirstProduct - NB_ITEMS_IN_PAGE, product);
+        }
+    }
+    
+    private void setPrevThumbnails() {
+        int nbPrevPages = (int) Math.ceil(((double)(noFirstProduct))/NB_ITEMS_IN_PAGE);
+        contentPanel.setPrevPageNumber(nbPrevPages);
+        for(int i = noFirstProduct - NB_ITEMS_IN_PAGE; i<noFirstProduct; i++) {
+            Product product = null;
+            try {
+                product = products.get(i);
+            } catch (IndexOutOfBoundsException e) {}
+            
+            contentPanel.setPrevPageThumbnail(i - noFirstProduct + NB_ITEMS_IN_PAGE, product);
         }
     }
     
@@ -123,18 +143,18 @@ public class Controller {
     }
     
     public void loadSome() {
-        products.add(new Product("/home/fabien/ProjetGSI/HighFiProtos/AFleurDeuxPots802/ressources/1.jpg", "Roses", 12.5));
-        products.add(new Product("/home/fabien/ProjetGSI/HighFiProtos/AFleurDeuxPots802/ressources/2.jpg", "Pervenches", 10.3));
-        products.add(new Product("/home/fabien/ProjetGSI/HighFiProtos/AFleurDeuxPots802/ressources/3.jpg", "Tulipes", 25));
-        products.add(new Product("/home/fabien/ProjetGSI/HighFiProtos/AFleurDeuxPots802/ressources/4.jpg", "Jonquilles", 15));
-        products.add(new Product("/home/fabien/ProjetGSI/HighFiProtos/AFleurDeuxPots802/ressources/5.jpg", "Orthies", 2));
-        products.add(new Product("/home/fabien/ProjetGSI/HighFiProtos/AFleurDeuxPots802/ressources/6.jpg", "yop", 2));
-        products.add(new Product("/home/fabien/ProjetGSI/HighFiProtos/AFleurDeuxPots802/ressources/7.jpg", "Plop", 2));
-        products.add(new Product("/home/fabien/ProjetGSI/HighFiProtos/AFleurDeuxPots802/ressources/8.jpg", "Géranium", 2));
-        products.add(new Product("/home/fabien/ProjetGSI/HighFiProtos/AFleurDeuxPots802/ressources/9.jpg", "Azerty", 2));
-        products.add(new Product("/home/fabien/ProjetGSI/HighFiProtos/AFleurDeuxPots802/ressources/10.jpg", "Qwerty", 2));
-        products.add(new Product("/home/fabien/ProjetGSI/HighFiProtos/AFleurDeuxPots802/ressources/11.jpg", "Bépo", 2));
-        products.add(new Product("/home/fabien/ProjetGSI/HighFiProtos/AFleurDeuxPots802/ressources/12.jpg", "ÉÉÉ", 2));
+        products.add(new Product("./ressources/1.jpg", "Roses", 12.5));
+        products.add(new Product("./ressources/2.jpg", "Pervenches", 10.3));
+        products.add(new Product("./ressources/3.jpg", "Tulipes", 25));
+        products.add(new Product("./ressources/4.jpg", "Jonquilles", 15));
+        products.add(new Product("./ressources/5.jpg", "Orthies", 2));
+        products.add(new Product("./ressources/6.jpg", "yop", 2));
+        products.add(new Product("./ressources/7.jpg", "Plop", 2));
+        products.add(new Product("./ressources/8.jpg", "Géranium", 2));
+        products.add(new Product("./ressources/9.jpg", "Azerty", 2));
+        products.add(new Product("./ressources/10.jpg", "Qwerty", 2));
+        products.add(new Product("./ressources/11.jpg", "Bépo", 2));
+        //products.add(new Product("./ressources/12.jpg", "ÉÉÉ", 2));
     }
     
     private enum State {
