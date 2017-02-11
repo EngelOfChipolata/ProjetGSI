@@ -7,6 +7,7 @@ package afleurdeuxpots802.module;
 
 import afleurdeuxpots802.header.Header;
 import afleurdeuxpots802.pages.accueil.Accueil;
+import afleurdeuxpots802.pages.content.Content;
 import afleurdeuxpots802.pages.panier.Panier;
 import java.util.Observable;
 import java.util.Observer;
@@ -26,7 +27,7 @@ public class Module implements Observer{
     
     private State state;
     private Observable accueil;
-    private Observable stValentin;
+    private Observable content;
     private Observable panier;
     private Observable commander;
 
@@ -37,11 +38,11 @@ public class Module implements Observer{
     private void init(){
         state = State.ACCUEIL;
         accueil = new Accueil();
-        //stValentin = new SaintValentin();
+        content = new Content();
         panier = new Panier();
         //commander = new Commander();
         accueil.addObserver(this);
-        //stValentin.addObserver(this);
+        content.addObserver(this);
         panier.addObserver(this);
         //commander.addObserver(this);
         showAccueil();
@@ -68,11 +69,11 @@ public class Module implements Observer{
         }
     }
     
-    private void handleStValentinClicked(){
+    private void handleContentClicked(){
         switch (state){
             case ACCUEIL:
                 state = State.ST_VALENTIN;
-                showStVal();
+                showContent();
                 break;
             case ST_VALENTIN:
                 //Non géré
@@ -155,30 +156,30 @@ public class Module implements Observer{
         }
     }
     
-    private void showStVal(){
+    private void showContent(){
         ((IFleur2PotsPage) accueil).hideWindow();
-        ((IFleur2PotsPage) stValentin).showWindow();
         ((IFleur2PotsPage) panier).hideWindow();
         ((IFleur2PotsPage) commander).hideWindow();
+        ((IFleur2PotsPage) content).showWindow();
     }
     
     private void showPanier(){
         ((IFleur2PotsPage) accueil).hideWindow();
-        ((IFleur2PotsPage) stValentin).hideWindow();
+        ((IFleur2PotsPage) content).hideWindow();
         ((IFleur2PotsPage) panier).showWindow();
         ((IFleur2PotsPage) commander).hideWindow();      
     }
     
     private void showCommander(){
         ((IFleur2PotsPage) accueil).hideWindow();
-        ((IFleur2PotsPage) stValentin).hideWindow();
+        ((IFleur2PotsPage) content).hideWindow();
         ((IFleur2PotsPage) panier).hideWindow();
         ((IFleur2PotsPage) commander).showWindow();
     }
     
     private void showAccueil(){
         ((IFleur2PotsPage) accueil).showWindow();
-        ((IFleur2PotsPage) stValentin).hideWindow();
+        ((IFleur2PotsPage) content).hideWindow();
         ((IFleur2PotsPage) panier).hideWindow();
         ((IFleur2PotsPage) commander).hideWindow();   
     }

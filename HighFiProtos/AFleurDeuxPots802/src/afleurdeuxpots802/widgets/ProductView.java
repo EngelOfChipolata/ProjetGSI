@@ -5,8 +5,8 @@
  */
 package afleurdeuxpots802.widgets;
 
+import afleurdeuxpots802.controller.Controller;
 import javax.swing.ImageIcon;
-import javax.swing.JLabel;
 
 /**
  *
@@ -15,11 +15,17 @@ import javax.swing.JLabel;
 public class ProductView extends javax.swing.JPanel {
 
     private static final String PATH_NO_IMAGE = "./ressources/noImage.png";
+    private Controller controller;
+    private int no;
     /**
      * Creates new form ProductView
      */
     public ProductView() {
         initComponents();
+    }
+    
+    public void setController(Controller controller) {
+        this.controller = controller;
     }
 
     /**
@@ -33,7 +39,6 @@ public class ProductView extends javax.swing.JPanel {
 
         nameLabel = new javax.swing.JLabel();
         priceLabel = new javax.swing.JLabel();
-        nbSpinner = new javax.swing.JSpinner();
         addToCartButton = new javax.swing.JButton();
         imgLabel = new javax.swing.JLabel();
 
@@ -42,6 +47,11 @@ public class ProductView extends javax.swing.JPanel {
         priceLabel.setText("0,00 €");
 
         addToCartButton.setText("Buy");
+        addToCartButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addToCartButtonActionPerformed(evt);
+            }
+        });
 
         imgLabel.setText("IMG");
 
@@ -59,12 +69,10 @@ public class ProductView extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(priceLabel)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nbSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGap(18, 18, 18)
                                 .addComponent(addToCartButton))
                             .addComponent(nameLabel))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addContainerGap(31, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -74,14 +82,17 @@ public class ProductView extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(imgLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(priceLabel)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(nbSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(addToCartButton)))
+                    .addComponent(addToCartButton))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void addToCartButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addToCartButtonActionPerformed
+        ViewEvent viewEvent = new ViewEvent(ViewEventType.ADD_TO_CART, no);
+        controller.handleEvent(viewEvent);
+    }//GEN-LAST:event_addToCartButtonActionPerformed
 
     public void setImage(String path) {
         if(path != null) {
@@ -104,6 +115,10 @@ public class ProductView extends javax.swing.JPanel {
         }
     }
     
+    public void setNo(int no) {
+        this.no = no;
+    }
+    
     public void setPrice(Double price) {
         if(price != null) {
             priceLabel.setText(price + " €");
@@ -114,7 +129,6 @@ public class ProductView extends javax.swing.JPanel {
     private javax.swing.JButton addToCartButton;
     private javax.swing.JLabel imgLabel;
     private javax.swing.JLabel nameLabel;
-    private javax.swing.JSpinner nbSpinner;
     private javax.swing.JLabel priceLabel;
     // End of variables declaration//GEN-END:variables
 

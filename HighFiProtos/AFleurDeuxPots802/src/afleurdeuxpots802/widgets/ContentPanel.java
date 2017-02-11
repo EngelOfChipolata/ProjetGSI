@@ -16,21 +16,37 @@ import afleurdeuxpots802.widgets.ProductView;
 public class ContentPanel extends javax.swing.JPanel {
     
     private Controller controller;
+    ProductView[] productViews;
     /**
      * Creates new form ContentPanel
      */
     public ContentPanel() {
         initComponents();
+        setProductViews();
         nextPageThumbnail.setAsNext();
         prevPageThumbnail.setAsPrev();
     }
     
-    public void setController(Controller controller) {
-        this.controller = controller;
+    private void setProductViews(){
+        productViews = new ProductView[7];
+        productViews[0] = productView1;
+        productViews[1] = productView2;
+        productViews[2] = productView3;
+        productViews[3] = productView4;
+        productViews[4] = productView5;
+        productViews[5] = productView6;
+        productViews[6] = productView7;
     }
     
-    public void setProduct(int i, Product product) {
-        ProductView[] productViews = {productView1, productView2, productView3, productView4, productView5, productView6, productView7};
+    public void setController(Controller controller) {
+        this.controller = controller;
+        for(ProductView productView : productViews) {
+            productView.setController(controller);
+        }
+    }
+    
+    public void setProduct(int i, Product product, int productNo) {
+        //ProductView[] productViews = {productView1, productView2, productView3, productView4, productView5, productView6, productView7};
         if(i<0 || i>= productViews.length) {
             return;
         }
@@ -39,11 +55,13 @@ public class ContentPanel extends javax.swing.JPanel {
             productView.setImage(product.getImagePath());
             productView.setName(product.getName());
             productView.setPrice(product.getPrice());
+            productView.setNo(productNo);
             productView.enableBuy(true);
         } else {
             productView.setImage(null);
             productView.setName("");
             productView.setPrice(0.);
+            productView.setNo(-1);
             productView.enableBuy(false);
         }
     }

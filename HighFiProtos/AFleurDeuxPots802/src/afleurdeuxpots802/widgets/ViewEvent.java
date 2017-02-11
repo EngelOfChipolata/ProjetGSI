@@ -11,22 +11,24 @@ package afleurdeuxpots802.widgets;
  */
 public class ViewEvent {
     private final ViewEventType eventType;
-    private final int number;
     private final int productNo;
     
     public ViewEvent(ViewEventType eventType) {
         this.eventType = eventType;
-        number = productNo = 0;
+        this.productNo = -1;
     }
 
-    public ViewEvent(ViewEventType eventType, int number, int productNo) {
+    public ViewEvent(ViewEventType eventType, int productNo) {
         this.eventType = eventType;
-        this.number = number;
         this.productNo = productNo;
     }
 
     public ViewEventType getEventType() {
         return eventType;
+    }
+
+    public int getProductNo() {
+        return productNo;
     }
     
 }
