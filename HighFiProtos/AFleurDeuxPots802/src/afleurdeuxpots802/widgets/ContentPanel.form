@@ -128,21 +128,11 @@
       </Properties>
     </Component>
     <Component class="afleurdeuxpots802.widgets.PageThumbnail" name="nextPageThumbnail">
-      <Properties>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[160, 220]"/>
-        </Property>
-      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="nextPageThumbnailMouseClicked"/>
       </Events>
     </Component>
     <Component class="afleurdeuxpots802.widgets.PageThumbnail" name="prevPageThumbnail">
-      <Properties>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[160, 220]"/>
-        </Property>
-      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="prevPageThumbnailMouseClicked"/>
       </Events>

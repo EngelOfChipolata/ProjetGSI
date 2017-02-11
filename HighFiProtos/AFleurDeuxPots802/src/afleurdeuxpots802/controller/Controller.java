@@ -75,6 +75,7 @@ public class Controller {
                 }
                 break;
             case ADD_TO_CART:
+                System.out.println(viewEvent.getProductNo());
                 break;
             case CHANGE_NB:
                 break; 
@@ -87,7 +88,7 @@ public class Controller {
             if(i+noFirstProduct < products.size()) {
                 product = products.get(i+noFirstProduct);
             }
-            contentPanel.setProduct(i, product);
+            contentPanel.setProduct(i, product, i+noFirstProduct);
         }
         
         setNextThumbnails();
