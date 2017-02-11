@@ -16,7 +16,9 @@ import javax.swing.JMenuItem;
  */
 public class Header extends javax.swing.JPanel {
     
-    JMenuBar menuBar;
+    private JMenuBar menuBar;
+    public final static int ACCUEIL_CLICKED_SIGNAL = 0;
+    public final static int ST_VALENTIN_CLICKED_SIGNAL = 1;
 
     /**
      * Creates new form Header

@@ -6,11 +6,8 @@
 package afleurdeuxpots802.pages.content;
 
 import afleurdeuxpots802.controller.Controller;
-import afleurdeuxpots802.header.Header;
 import afleurdeuxpots802.module.IFleur2PotsPage;
-import afleurdeuxpots802.widgets.ContentPanel;
 import java.util.Observable;
-import javax.swing.JFrame;
 
 /**
  *
@@ -28,12 +25,12 @@ public class Content extends Observable implements IFleur2PotsPage{
     }
     
     @Override
-    public void ShowWindow() {
+    public void showWindow() {
         contentFrame.setVisible(true);
     }
 
     @Override
-    public void HideWindow() {
+    public void hideWindow() {
         contentFrame.setVisible(false);
     }
     

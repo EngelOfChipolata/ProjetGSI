@@ -5,6 +5,10 @@
  */
 package afleurdeuxpots802.module;
 
+import afleurdeuxpots802.header.Header;
+import afleurdeuxpots802.pages.accueil.Accueil;
+import afleurdeuxpots802.pages.content.Content;
+import afleurdeuxpots802.pages.panier.Panier;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -32,16 +36,16 @@ public class Module implements Observer{
     }
     
     private void init(){
-        /*state = State.ACCUEIL;
+        state = State.ACCUEIL;
         accueil = new Accueil();
-        panier = new Panier();
-        commander = new Commander();*/
         content = new Content();
+        panier = new Panier();
+        //commander = new Commander();
         accueil.addObserver(this);
-        panier.addObserver(this);
-        commander.addObserver(this);
-        showAccueil();
         content.addObserver(this);
+        panier.addObserver(this);
+        //commander.addObserver(this);
+        showAccueil();
     }
     
     
@@ -49,20 +53,20 @@ public class Module implements Observer{
     @Override
     public void update(Observable o, Object arg) {
         int event = (int) arg;
-        /*switch (event){
-            case ST_VALENTIN_CLICKED:
+        switch (event){
+            /*case ST_VALENTIN_CLICKED:
                 handleStValentinClicked();
-                break;
-            case PANIER_CLICKED:
+                break;*/
+            /*case PANIER_CLICKED:
                 handlePanierClicked();
-                break;
-            case COMMANDER_CLICKED:
+                break;*/
+            case Panier.COMMANDE_CLICKED_SIGNAL:
                 handleCommanderClicked();
                 break;
-            case ACCUEIL_CLICKED:
+            case Header.ACCUEIL_CLICKED_SIGNAL:
                 handleAccueilClicked();
                 break;
-        }*/
+        }
     }
     
     private void handleContentClicked(){
@@ -153,31 +157,31 @@ public class Module implements Observer{
     }
     
     private void showContent(){
-        /*((IFleur2PotsPage) accueil).hideWindow();
+        ((IFleur2PotsPage) accueil).hideWindow();
         ((IFleur2PotsPage) panier).hideWindow();
-        ((IFleur2PotsPage) commander).hideWindow();*/
-        ((IFleur2PotsPage) content).ShowWindow();
+        ((IFleur2PotsPage) commander).hideWindow();
+        ((IFleur2PotsPage) content).showWindow();
     }
     
     private void showPanier(){
-        /*((IFleur2PotsPage) accueil).hideWindow();
-        ((IFleur2PotsPage) stValentin).hideWindow();
+        ((IFleur2PotsPage) accueil).hideWindow();
+        ((IFleur2PotsPage) content).hideWindow();
         ((IFleur2PotsPage) panier).showWindow();
-        ((IFleur2PotsPage) commander).hideWindow(); */       
+        ((IFleur2PotsPage) commander).hideWindow();      
     }
     
     private void showCommander(){
-        /*((IFleur2PotsPage) accueil).hideWindow();
-        ((IFleur2PotsPage) stValentin).hideWindow();
+        ((IFleur2PotsPage) accueil).hideWindow();
+        ((IFleur2PotsPage) content).hideWindow();
         ((IFleur2PotsPage) panier).hideWindow();
-        ((IFleur2PotsPage) commander).showWindow();  */
+        ((IFleur2PotsPage) commander).showWindow();
     }
     
     private void showAccueil(){
-        /*((IFleur2PotsPage) accueil).showWindow();
-        ((IFleur2PotsPage) stValentin).hideWindow();
+        ((IFleur2PotsPage) accueil).showWindow();
+        ((IFleur2PotsPage) content).hideWindow();
         ((IFleur2PotsPage) panier).hideWindow();
-        ((IFleur2PotsPage) commander).hideWindow();      */    
+        ((IFleur2PotsPage) commander).hideWindow();   
     }
     
 }
