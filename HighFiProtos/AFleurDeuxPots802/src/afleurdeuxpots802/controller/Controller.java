@@ -16,15 +16,15 @@ import java.util.ArrayList;
  */
 public class Controller {
     private State state;
-    private int NB_ITEMS_IN_PAGE;
+    private final int NB_ITEMS_IN_PAGE;
     private ArrayList<Product> products;
-    private ContentPanel contentPanel;
+    private final ContentPanel contentPanel;
     private int noFirstProduct;
 
     public Controller(ContentPanel contentPanel) {
         this.contentPanel = contentPanel;
         NB_ITEMS_IN_PAGE = 7;
-        init();
+        initState();
     }
     
     public void handleEvent(ViewEvent viewEvent) {
@@ -35,7 +35,7 @@ public class Controller {
                         //forbidden
                         break;
                     case RIGHT_STOP:
-                        noFirstProduct += NB_ITEMS_IN_PAGE;
+                        noFirstProduct -= NB_ITEMS_IN_PAGE;
                         updateProducts();
                         state = getNewState();
                         break;
@@ -43,7 +43,7 @@ public class Controller {
                         //forbidden
                         break;
                     case NO_STOP:
-                        noFirstProduct += NB_ITEMS_IN_PAGE;
+                        noFirstProduct -= NB_ITEMS_IN_PAGE;
                         updateProducts();
                         state = getNewState();
                         break;                    
@@ -133,12 +133,11 @@ public class Controller {
         return State.NO_STOP;
     }
     
-    public void init() {
+    private void initState() {
         products = new ArrayList<>();
         loadSome();
         noFirstProduct = 0;
         state = getNewState();
-        
         updateProducts();
     }
     
@@ -154,7 +153,20 @@ public class Controller {
         products.add(new Product("./ressources/9.jpg", "Azerty", 2));
         products.add(new Product("./ressources/10.jpg", "Qwerty", 2));
         products.add(new Product("./ressources/11.jpg", "Bépo", 2));
-        //products.add(new Product("./ressources/12.jpg", "ÉÉÉ", 2));
+        products.add(new Product("./ressources/12.jpg", "ÉÉÉ", 2));
+        products.add(new Product("./ressources/1.jpg", "Roses", 12.5));
+        products.add(new Product("./ressources/2.jpg", "Pervenches", 10.3));
+        products.add(new Product("./ressources/3.jpg", "Tulipes", 25));
+        products.add(new Product("./ressources/4.jpg", "Jonquilles", 15));
+        products.add(new Product("./ressources/5.jpg", "Orthies", 2));
+        products.add(new Product("./ressources/6.jpg", "yop", 2));
+        products.add(new Product("./ressources/7.jpg", "Plop", 2));
+        products.add(new Product("./ressources/8.jpg", "Géranium", 2));
+        products.add(new Product("./ressources/9.jpg", "Azerty", 2));
+        products.add(new Product("./ressources/10.jpg", "Qwerty", 2));
+        products.add(new Product("./ressources/11.jpg", "Bépo", 2));
+        products.add(new Product("./ressources/12.jpg", "ÉÉÉ", 2));
+        
     }
     
     private enum State {

@@ -61,7 +61,6 @@ public class ContentPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        prevPageThumbnail = new afleurdeuxpots802.widgets.PageThumbnail();
         productView1 = new afleurdeuxpots802.widgets.ProductView();
         productView2 = new afleurdeuxpots802.widgets.ProductView();
         productView3 = new afleurdeuxpots802.widgets.ProductView();
@@ -70,13 +69,7 @@ public class ContentPanel extends javax.swing.JPanel {
         productView6 = new afleurdeuxpots802.widgets.ProductView();
         productView7 = new afleurdeuxpots802.widgets.ProductView();
         nextPageThumbnail = new afleurdeuxpots802.widgets.PageThumbnail();
-
-        prevPageThumbnail.setPreferredSize(new java.awt.Dimension(160, 180));
-        prevPageThumbnail.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                prevPageThumbnailMouseClicked(evt);
-            }
-        });
+        prevPageThumbnail = new afleurdeuxpots802.widgets.PageThumbnail();
 
         productView1.setPreferredSize(new java.awt.Dimension(160, 180));
 
@@ -99,6 +92,12 @@ public class ContentPanel extends javax.swing.JPanel {
             }
         });
 
+        prevPageThumbnail.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                prevPageThumbnailMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -106,7 +105,7 @@ public class ContentPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(prevPageThumbnail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(11, 11, 11)
                 .addComponent(productView1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(productView2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
