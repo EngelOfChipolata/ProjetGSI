@@ -15,12 +15,12 @@ import java.util.Observable;
 public class Accueil extends Observable implements IFleur2PotsPage {
 
     @Override
-    public void ShowWindow() {
+    public void showWindow() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void HideWindow() {
+    public void hideWindow() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

@@ -47,7 +47,7 @@
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\buisangu.ELEVE-ENAC.002\Downloads\AFDP.png"/>
+          <Image iconType="3" name="/afleurdeuxpots802/header/AFDP.png"/>
         </Property>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>

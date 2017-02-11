@@ -16,7 +16,9 @@ import javax.swing.JMenuItem;
  */
 public class Header extends javax.swing.JPanel {
     
-    JMenuBar menuBar;
+    private JMenuBar menuBar;
+    public final static int ACCUEIL_CLICKED_SIGNAL = 0;
+    public final static int ST_VALENTIN_CLICKED_SIGNAL = 1;
 
     /**
      * Creates new form Header
@@ -58,7 +60,7 @@ public class Header extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(1360, 440));
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\buisangu.ELEVE-ENAC.002\\Downloads\\AFDP.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/afleurdeuxpots802/header/AFDP.png"))); // NOI18N
         jLabel1.setToolTipText("");
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/afleurdeuxpots802/header/Panier vide.png"))); // NOI18N

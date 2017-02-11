@@ -10,6 +10,6 @@ package afleurdeuxpots802.module;
  * @author buisangu
  */
 public interface IFleur2PotsPage {
-    public void ShowWindow();
-    public void HideWindow();
+    public void showWindow();
+    public void hideWindow();
 }
