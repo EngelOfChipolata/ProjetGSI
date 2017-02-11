@@ -8,6 +8,9 @@ package afleurdeuxpots802.controller;
 import afleurdeuxpots802.widgets.ContentPanel;
 import afleurdeuxpots802.model.Product;
 import afleurdeuxpots802.widgets.ViewEvent;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -16,9 +19,11 @@ import java.util.ArrayList;
  */
 public class Controller {
     private State state;
+    private final static String PATH_PRODUCTS = "./ressources/products/";
     private final int NB_ITEMS_IN_PAGE;
-    private ArrayList<Product> products;
     private final ContentPanel contentPanel;
+    private ArrayList<Product> products;
+    
     private int noFirstProduct;
 
     public Controller(ContentPanel contentPanel) {
@@ -135,39 +140,52 @@ public class Controller {
     
     private void initState() {
         products = new ArrayList<>();
-        loadSome();
+        loadProducts(PATH_PRODUCTS + "catalog.txt");
         noFirstProduct = 0;
         state = getNewState();
         updateProducts();
     }
     
-    public void loadSome() {
-        products.add(new Product("./ressources/1.jpg", "Roses", 12.5));
-        products.add(new Product("./ressources/2.jpg", "Pervenches", 10.3));
-        products.add(new Product("./ressources/3.jpg", "Tulipes", 25));
-        products.add(new Product("./ressources/4.jpg", "Jonquilles", 15));
-        products.add(new Product("./ressources/5.jpg", "Orthies", 2));
-        products.add(new Product("./ressources/6.jpg", "yop", 2));
-        products.add(new Product("./ressources/7.jpg", "Plop", 2));
-        products.add(new Product("./ressources/8.jpg", "Géranium", 2));
-        products.add(new Product("./ressources/9.jpg", "Azerty", 2));
-        products.add(new Product("./ressources/10.jpg", "Qwerty", 2));
-        products.add(new Product("./ressources/11.jpg", "Bépo", 2));
-        products.add(new Product("./ressources/12.jpg", "ÉÉÉ", 2));
-        products.add(new Product("./ressources/1.jpg", "Roses", 12.5));
-        products.add(new Product("./ressources/2.jpg", "Pervenches", 10.3));
-        products.add(new Product("./ressources/3.jpg", "Tulipes", 25));
-        products.add(new Product("./ressources/4.jpg", "Jonquilles", 15));
-        products.add(new Product("./ressources/5.jpg", "Orthies", 2));
-        products.add(new Product("./ressources/6.jpg", "yop", 2));
-        products.add(new Product("./ressources/7.jpg", "Plop", 2));
-        products.add(new Product("./ressources/8.jpg", "Géranium", 2));
-        products.add(new Product("./ressources/9.jpg", "Azerty", 2));
-        products.add(new Product("./ressources/10.jpg", "Qwerty", 2));
-        products.add(new Product("./ressources/11.jpg", "Bépo", 2));
-        products.add(new Product("./ressources/12.jpg", "ÉÉÉ", 2));
-        
+    public void loadProducts(String filename) {
+    BufferedReader br = null;
+    FileReader fr = null;
+
+    try {
+        String sCurrentLine;
+        fr = new FileReader(filename);
+        br = new BufferedReader(fr);
+
+        while ((sCurrentLine = br.readLine()) != null) {
+            String[] params = sCurrentLine.split(";");
+            if(params.length != 3) {
+                continue;
+            }
+            String path = PATH_PRODUCTS + params[0];
+            System.out.println(path);
+            String name = params[1];
+            double price = Double.parseDouble(params[2]);
+            products.add(new Product(path, name, price));
+
+        }
+
+    } catch (IOException e) {
+            e.printStackTrace();
     }
+    finally {
+        try {
+            if (br != null){
+                br.close();
+            }
+            if (fr != null){
+                fr.close();
+        }
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+    }
+    
+    
     
     private enum State {
         LEFT_STOP,

@@ -39,8 +39,12 @@ public class ContentPanel extends javax.swing.JPanel {
             productView.setImage(product.getImagePath());
             productView.setName(product.getName());
             productView.setPrice(product.getPrice());
+            productView.enableBuy(true);
         } else {
             productView.setImage(null);
+            productView.setName("");
+            productView.setPrice(0.);
+            productView.enableBuy(false);
         }
     }
     
@@ -71,27 +75,28 @@ public class ContentPanel extends javax.swing.JPanel {
         nextPageThumbnail = new afleurdeuxpots802.widgets.PageThumbnail();
         prevPageThumbnail = new afleurdeuxpots802.widgets.PageThumbnail();
 
-        productView1.setPreferredSize(new java.awt.Dimension(160, 180));
+        productView1.setPreferredSize(new java.awt.Dimension(160, 220));
 
-        productView2.setPreferredSize(new java.awt.Dimension(160, 180));
+        productView2.setPreferredSize(new java.awt.Dimension(160, 220));
 
-        productView3.setPreferredSize(new java.awt.Dimension(160, 180));
+        productView3.setPreferredSize(new java.awt.Dimension(160, 220));
 
-        productView4.setPreferredSize(new java.awt.Dimension(160, 180));
+        productView4.setPreferredSize(new java.awt.Dimension(160, 220));
 
-        productView5.setPreferredSize(new java.awt.Dimension(160, 180));
+        productView5.setPreferredSize(new java.awt.Dimension(160, 220));
 
-        productView6.setPreferredSize(new java.awt.Dimension(160, 180));
+        productView6.setPreferredSize(new java.awt.Dimension(160, 220));
 
-        productView7.setPreferredSize(new java.awt.Dimension(160, 180));
+        productView7.setPreferredSize(new java.awt.Dimension(160, 220));
 
-        nextPageThumbnail.setPreferredSize(new java.awt.Dimension(160, 180));
+        nextPageThumbnail.setPreferredSize(new java.awt.Dimension(160, 220));
         nextPageThumbnail.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 nextPageThumbnailMouseClicked(evt);
             }
         });
 
+        prevPageThumbnail.setPreferredSize(new java.awt.Dimension(160, 220));
         prevPageThumbnail.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 prevPageThumbnailMouseClicked(evt);

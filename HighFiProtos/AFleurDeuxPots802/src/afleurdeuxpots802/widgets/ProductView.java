@@ -85,7 +85,8 @@ public class ProductView extends javax.swing.JPanel {
 
     public void setImage(String path) {
         if(path != null) {
-            ImageIcon icon = new ImageIcon(path);
+            //ImageIcon icon = new ImageIcon(path);
+            ImageIcon icon = new ImageIcon((new ImageIcon(path)).getImage().getScaledInstance(150, 150,  java.awt.Image.SCALE_SMOOTH));
             imgLabel.setText("");
             imgLabel.setIcon(icon);
         } else {
@@ -116,4 +117,8 @@ public class ProductView extends javax.swing.JPanel {
     private javax.swing.JSpinner nbSpinner;
     private javax.swing.JLabel priceLabel;
     // End of variables declaration//GEN-END:variables
+
+    void enableBuy(boolean b) {
+        this.addToCartButton.setEnabled(b);
+    }
 }
