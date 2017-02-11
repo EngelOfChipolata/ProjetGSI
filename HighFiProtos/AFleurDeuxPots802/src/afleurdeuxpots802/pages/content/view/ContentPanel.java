@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package afleurdeuxpots802.widgets;
+package afleurdeuxpots802.pages.content.view;
 
-import afleurdeuxpots802.controller.Controller;
+import afleurdeuxpots802.pages.content.Controller;
 import afleurdeuxpots802.model.Product;
-import afleurdeuxpots802.widgets.ProductView;
+import afleurdeuxpots802.pages.content.view.ProductView;
 
 /**
  *
@@ -83,15 +83,15 @@ public class ContentPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        productView1 = new afleurdeuxpots802.widgets.ProductView();
-        productView2 = new afleurdeuxpots802.widgets.ProductView();
-        productView3 = new afleurdeuxpots802.widgets.ProductView();
-        productView4 = new afleurdeuxpots802.widgets.ProductView();
-        productView5 = new afleurdeuxpots802.widgets.ProductView();
-        productView6 = new afleurdeuxpots802.widgets.ProductView();
-        productView7 = new afleurdeuxpots802.widgets.ProductView();
-        nextPageThumbnail = new afleurdeuxpots802.widgets.PageThumbnail();
-        prevPageThumbnail = new afleurdeuxpots802.widgets.PageThumbnail();
+        productView1 = new afleurdeuxpots802.pages.content.view.ProductView();
+        productView2 = new afleurdeuxpots802.pages.content.view.ProductView();
+        productView3 = new afleurdeuxpots802.pages.content.view.ProductView();
+        productView4 = new afleurdeuxpots802.pages.content.view.ProductView();
+        productView5 = new afleurdeuxpots802.pages.content.view.ProductView();
+        productView6 = new afleurdeuxpots802.pages.content.view.ProductView();
+        productView7 = new afleurdeuxpots802.pages.content.view.ProductView();
+        nextPageThumbnail = new afleurdeuxpots802.pages.content.view.PageThumbnail();
+        prevPageThumbnail = new afleurdeuxpots802.pages.content.view.PageThumbnail();
 
         productView1.setPreferredSize(new java.awt.Dimension(160, 220));
 
@@ -185,15 +185,15 @@ public class ContentPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private afleurdeuxpots802.widgets.PageThumbnail nextPageThumbnail;
-    private afleurdeuxpots802.widgets.PageThumbnail prevPageThumbnail;
-    private afleurdeuxpots802.widgets.ProductView productView1;
-    private afleurdeuxpots802.widgets.ProductView productView2;
-    private afleurdeuxpots802.widgets.ProductView productView3;
-    private afleurdeuxpots802.widgets.ProductView productView4;
-    private afleurdeuxpots802.widgets.ProductView productView5;
-    private afleurdeuxpots802.widgets.ProductView productView6;
-    private afleurdeuxpots802.widgets.ProductView productView7;
+    private afleurdeuxpots802.pages.content.view.PageThumbnail nextPageThumbnail;
+    private afleurdeuxpots802.pages.content.view.PageThumbnail prevPageThumbnail;
+    private afleurdeuxpots802.pages.content.view.ProductView productView1;
+    private afleurdeuxpots802.pages.content.view.ProductView productView2;
+    private afleurdeuxpots802.pages.content.view.ProductView productView3;
+    private afleurdeuxpots802.pages.content.view.ProductView productView4;
+    private afleurdeuxpots802.pages.content.view.ProductView productView5;
+    private afleurdeuxpots802.pages.content.view.ProductView productView6;
+    private afleurdeuxpots802.pages.content.view.ProductView productView7;
     // End of variables declaration//GEN-END:variables
 
     public void setNextPagesNumber(int nbNextPages) {

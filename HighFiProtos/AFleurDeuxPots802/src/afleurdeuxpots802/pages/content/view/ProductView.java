@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package afleurdeuxpots802.widgets;
+package afleurdeuxpots802.pages.content.view;
 
-import afleurdeuxpots802.controller.Controller;
+import afleurdeuxpots802.pages.content.Controller;
 import javax.swing.ImageIcon;
 
 /**

@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package afleurdeuxpots802.controller;
+package afleurdeuxpots802.pages.content;
 
-import afleurdeuxpots802.widgets.ContentPanel;
+import afleurdeuxpots802.pages.content.view.ContentPanel;
 import afleurdeuxpots802.model.Product;
-import afleurdeuxpots802.widgets.ViewEvent;
+import afleurdeuxpots802.pages.content.view.ViewEvent;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;

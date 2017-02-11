@@ -48,7 +48,7 @@
   <SubComponents>
     <Component class="afleurdeuxpots802.header.Header" name="header1">
     </Component>
-    <Component class="afleurdeuxpots802.widgets.ContentPanel" name="contentPanel1">
+    <Component class="afleurdeuxpots802.pages.content.view.ContentPanel" name="contentPanel1">
     </Component>
   </SubComponents>
 </Form>

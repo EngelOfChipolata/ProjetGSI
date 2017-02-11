@@ -5,7 +5,6 @@
  */
 package afleurdeuxpots802.pages.content;
 
-import afleurdeuxpots802.controller.Controller;
 import afleurdeuxpots802.module.IFleur2PotsPage;
 import java.util.Observable;
 

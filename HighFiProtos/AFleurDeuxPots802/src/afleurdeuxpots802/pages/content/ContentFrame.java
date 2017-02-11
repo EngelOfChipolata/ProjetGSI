@@ -5,8 +5,7 @@
  */
 package afleurdeuxpots802.pages.content;
 
-import afleurdeuxpots802.controller.Controller;
-import afleurdeuxpots802.widgets.ContentPanel;
+import afleurdeuxpots802.pages.content.view.ContentPanel;
 
 /**
  *
@@ -31,7 +30,7 @@ public class ContentFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         header1 = new afleurdeuxpots802.header.Header();
-        contentPanel1 = new afleurdeuxpots802.widgets.ContentPanel();
+        contentPanel1 = new afleurdeuxpots802.pages.content.view.ContentPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -95,7 +94,7 @@ public class ContentFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private afleurdeuxpots802.widgets.ContentPanel contentPanel1;
+    private afleurdeuxpots802.pages.content.view.ContentPanel contentPanel1;
     private afleurdeuxpots802.header.Header header1;
     // End of variables declaration//GEN-END:variables
 
