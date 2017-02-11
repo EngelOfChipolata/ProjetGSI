@@ -6,33 +6,35 @@
 package afleurdeuxpots802.pages.content;
 
 import afleurdeuxpots802.controller.Controller;
+import afleurdeuxpots802.header.Header;
 import afleurdeuxpots802.module.IFleur2PotsPage;
 import afleurdeuxpots802.widgets.ContentPanel;
 import java.util.Observable;
+import javax.swing.JFrame;
 
 /**
  *
  * @author bonnevfa
  */
 public class Content extends Observable implements IFleur2PotsPage{
-
-    ContentPanel contentPanel;
-    Controller controller;
+    ContentFrame contentFrame;               //the frame
+    Controller controller;      //the amazing controller for the amazing content panel
     
     public Content() {
-        contentPanel = new ContentPanel();
-        controller = new Controller(contentPanel);
-        contentPanel.setController(controller);
+        contentFrame = new ContentFrame();
+        controller = new Controller(contentFrame.getContentPanel());
+        contentFrame.setController(controller);
+        controller.initState();
     }
     
     @Override
     public void ShowWindow() {
-        contentPanel.setVisible(true);
+        contentFrame.setVisible(true);
     }
 
     @Override
     public void HideWindow() {
-        contentPanel.setVisible(false);
+        contentFrame.setVisible(false);
     }
     
 }

@@ -29,7 +29,6 @@ public class Controller {
     public Controller(ContentPanel contentPanel) {
         this.contentPanel = contentPanel;
         NB_ITEMS_IN_PAGE = 7;
-        initState();
     }
     
     public void handleEvent(ViewEvent viewEvent) {
@@ -124,22 +123,22 @@ public class Controller {
     
     private State getNewState() {
         if(products.size() <= NB_ITEMS_IN_PAGE) {
-            System.out.println(State.LEFT_RIGHT_STOP);
+            //System.out.println(State.LEFT_RIGHT_STOP);
             return State.LEFT_RIGHT_STOP;
         }
         if(noFirstProduct <= 0) {
-            System.out.println(State.LEFT_STOP);
+            //System.out.println(State.LEFT_STOP);
             return State.LEFT_STOP;
         }
         if(noFirstProduct + NB_ITEMS_IN_PAGE >= products.size()) {
-            System.out.println(State.RIGHT_STOP);
+            //System.out.println(State.RIGHT_STOP);
             return State.RIGHT_STOP;
         }
-        System.out.println(State.NO_STOP);
+        //System.out.println(State.NO_STOP);
         return State.NO_STOP;
     }
     
-    private void initState() {
+    public void initState() {
         products = new ArrayList<>();
         loadProducts(PATH_PRODUCTS + "catalog.txt");
         noFirstProduct = 0;
