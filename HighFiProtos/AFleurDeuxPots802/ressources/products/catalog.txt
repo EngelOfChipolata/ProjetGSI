@@ -1,0 +1,38 @@
+Bouquet (1).jpg;Bonheur;34.90
+Bouquet (10).jpg;Je t'aime;35.21
+Bouquet (11).jpg;Fougue;52.1
+Bouquet (12).jpg;Un coeur comme ça;53.5
+Bouquet (13).jpg;Orphée;19.6
+Bouquet (14).jpg;Sentiment;37.0
+Bouquet (15).jpg;Charme;63.1
+Bouquet (16).jpg;Toi & Moi;11.9
+Bouquet (17).jpg;Confidence;30.6
+Bouquet (18).jpg;Au revoir papy;63.8
+Bouquet (19).jpg;Bien fait Belle mère;19.3
+Bouquet (2).jpg;Amour;30.6
+Bouquet (20).jpg;Eclat Naturel;43.2
+Bouquet (21).jpg;Célébration;31.5
+Bouquet (22).jpg;tendresse;45.2
+Bouquet (23).jpg;tonique;43.1
+Bouquet (24).jpg;Capri c'est fini;60.2
+Bouquet (25).jpg;La belle de Cadix;79.2
+Bouquet (26).jpg;Symphonie;51.5
+Bouquet (27).jpg;Santorin;53.8
+Bouquet (28).jpg;Audacee;62.6
+Bouquet (29).jpg;Malice;73.6
+Bouquet (3).jpg;So chic;36.1
+Bouquet (30).jpg;I love you baby;56.5
+Bouquet (31).jpg;Sweet dreams;65.0
+Bouquet (32).jpg;I was made for loving you;63.8
+Bouquet (33).jpg;Alchimie;11.9
+Bouquet (34).jpg;Plaisir;53.5
+Bouquet (35).jpg;Secret;52.1
+Bouquet (4).jpg;Délices;53.8
+Bouquet (5).jpg;Roméo;70.8
+Bouquet (6).jpg;Juliette;66.5
+Bouquet (7).jpg;Eden;36.1
+Bouquet (8).jpg;Boudin;11.9
+Bouquet (9).jpg;Swing;65.0
+b36.jpg;Salsa;35.5
+b37.jpg;Félicité;32.56
+b38.jpg;Kitch;56.32
