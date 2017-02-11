@@ -90,7 +90,7 @@ public class ProductView extends javax.swing.JPanel {
             imgLabel.setText("");
             imgLabel.setIcon(icon);
         } else {
-            ImageIcon icon = new ImageIcon(PATH_NO_IMAGE);
+            ImageIcon icon = new ImageIcon((new ImageIcon(PATH_NO_IMAGE)).getImage().getScaledInstance(150, 150,  java.awt.Image.SCALE_SMOOTH));
             imgLabel.setText("");
             imgLabel.setIcon(icon);
         }
