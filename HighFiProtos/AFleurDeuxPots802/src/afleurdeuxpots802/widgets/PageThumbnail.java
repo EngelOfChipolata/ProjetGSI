@@ -6,7 +6,6 @@
 package afleurdeuxpots802.widgets;
 
 import afleurdeuxpots802.model.Product;
-import java.awt.Font;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
@@ -16,17 +15,20 @@ import javax.swing.JLabel;
  */
 public class PageThumbnail extends javax.swing.JPanel {
     private static final String PATH_NO_IMAGE = "./ressources/noImage.png";
+    private static final String PATH_NO_MORE_PAGES = "./ressources/other_pages.jpg";
     JLabel[] jLabels;
+    private final ImageIcon iconNoImage;
+    private final ImageIcon iconMorePages;
     /**
      * Creates new form PageThumbnail
      */
     public PageThumbnail() {
         initComponents();
-        jLabels = new JLabel[8];
-        jLabel9.setFont(new Font("Courier New", Font.BOLD, 24));
-        jLabel1.setFont(new Font("Courier New", Font.BOLD, 24));
+        jLabels = new JLabel[8];        
         jLabel9.setText("");
         jLabel1.setText("");
+        iconNoImage = new ImageIcon((new ImageIcon(PATH_NO_IMAGE)).getImage().getScaledInstance(40, 40,  java.awt.Image.SCALE_SMOOTH));
+        iconMorePages = new ImageIcon((new ImageIcon(PATH_NO_MORE_PAGES)).getImage().getScaledInstance(40, 40,  java.awt.Image.SCALE_SMOOTH));
     }
     
     public void setAsNext() {
@@ -70,6 +72,8 @@ public class PageThumbnail extends javax.swing.JPanel {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
 
+        jLabel1.setFont(new java.awt.Font("Open Sans", 0, 18)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("jLabel1");
         jLabel1.setPreferredSize(new java.awt.Dimension(40, 40));
 
@@ -94,6 +98,8 @@ public class PageThumbnail extends javax.swing.JPanel {
         jLabel8.setText("jLabel8");
         jLabel8.setPreferredSize(new java.awt.Dimension(40, 40));
 
+        jLabel9.setFont(new java.awt.Font("Open Sans", 0, 18)); // NOI18N
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("jLabel9");
         jLabel9.setPreferredSize(new java.awt.Dimension(40, 40));
 
@@ -158,22 +164,30 @@ public class PageThumbnail extends javax.swing.JPanel {
         //JLabel[] jLabels = {jLabel2, jLabel3, jLabel4, jLabel5, jLabel6, jLabel7, jLabel8};
         JLabel imgLabel = jLabels[i];
         if(product != null) {
-            ImageIcon icon0 = new ImageIcon(product.getImagePath());
-            ImageIcon icon = new ImageIcon(icon0.getImage().getScaledInstance(40, 40,  java.awt.Image.SCALE_SMOOTH));
+            ImageIcon icon = new ImageIcon((new ImageIcon(product.getImagePath())).getImage().getScaledInstance(40, 40,  java.awt.Image.SCALE_SMOOTH));
             imgLabel.setText("");
             imgLabel.setIcon(icon);
         } else {
-            ImageIcon icon0 = new ImageIcon(PATH_NO_IMAGE);
-            ImageIcon icon = new ImageIcon(icon0.getImage().getScaledInstance(40, 40,  java.awt.Image.SCALE_SMOOTH));
+            imgLabel.setIcon(iconNoImage);
         }
         
     }
 
     void setNextPageNumber(int nbNextPages) {
-        jLabel9.setText(Integer.toString(nbNextPages));
+        jLabel1.setText(Integer.toString(nbNextPages));
+        if(nbNextPages > 1) {
+           jLabel9.setIcon(iconMorePages);
+        } else {
+           jLabel9.setIcon(null); 
+        }
     }
     
     void setPrevPageNumber(int nbPrevPages) {
-        jLabel1.setText(Integer.toString(nbPrevPages));
+        jLabel9.setText(Integer.toString(nbPrevPages));
+        if(nbPrevPages > 1) {
+           jLabel1.setIcon(iconMorePages);
+        } else {
+           jLabel1.setIcon(null); 
+        }
     }
 }
