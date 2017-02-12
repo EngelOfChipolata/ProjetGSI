@@ -12,4 +12,5 @@ package afleurdeuxpots802.module;
 public interface IFleur2PotsPage {
     public void showWindow();
     public void hideWindow();
+    public void setFull(boolean b);
 }

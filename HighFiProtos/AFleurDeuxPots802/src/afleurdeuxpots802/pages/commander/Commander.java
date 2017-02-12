@@ -33,4 +33,8 @@ public class Commander  extends Observable implements IFleur2PotsPage{
         commanderFrame.setVisible(false);
     }
     
+    @Override
+    public void setFull(boolean b) {
+        commanderFrame.setFull(b);
+    }
 }

@@ -88,7 +88,8 @@ public class ContentFrame extends javax.swing.JFrame implements IHeaderHolder{
         header1.removePropertyChangeListener(name, li);
     }
 
-    void setFull(boolean b) {
+    @Override
+    public void setFull(boolean b) {
         header1.setFull(b);
     }
     

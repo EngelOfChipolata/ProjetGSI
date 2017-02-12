@@ -14,5 +14,5 @@ import java.beans.PropertyChangeListener;
 public interface IHeaderHolder {
     public void addHeaderCallback(String name, PropertyChangeListener li);
     public void removeHeaderCallback(String name, PropertyChangeListener li);
-    
+    public void setFull(boolean b);
 }

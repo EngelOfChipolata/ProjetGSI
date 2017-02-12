@@ -15,7 +15,7 @@ import java.util.Observable;
  */
 public class Accueil extends Observable implements IFleur2PotsPage {
 
-    private AccueilPage accueilPage;
+    private final AccueilPage accueilPage;
 
     public Accueil() {
         accueilPage = new AccueilPage();
@@ -39,4 +39,8 @@ public class Accueil extends Observable implements IFleur2PotsPage {
         accueilPage.setVisible(false);
     }
     
+    @Override
+    public void setFull(boolean b) {
+        accueilPage.setFull(b);
+    }
 }

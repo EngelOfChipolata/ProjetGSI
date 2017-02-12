@@ -35,6 +35,11 @@ public class AccueilPage extends javax.swing.JFrame implements IHeaderHolder{
         header1.addPropertyChangeListener(name, li);
     }
 
+    @Override
+    public void setFull(boolean b) {
+        header1.setFull(b);
+    }
+
     /**
      * Creates new form AcceuilPage
      */

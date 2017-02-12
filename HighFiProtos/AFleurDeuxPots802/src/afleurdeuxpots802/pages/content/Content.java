@@ -31,6 +31,10 @@ public class Content extends Observable implements IFleur2PotsPage{
             setChanged();
             notifyObservers(Header.ST_VALENTIN_CLICKED_SIGNAL);
         });
+        contentFrame.addHeaderCallback(String.valueOf(Header.PRODUCT_ADDED_SIGNAL), (evt) -> {
+            setChanged();
+            notifyObservers(Header.PRODUCT_ADDED_SIGNAL);
+        });
     }
     
     @Override
@@ -41,6 +45,11 @@ public class Content extends Observable implements IFleur2PotsPage{
     @Override
     public void hideWindow() {
         contentFrame.setVisible(false);
+    }
+
+    @Override
+    public void setFull(boolean b) {
+        contentFrame.setFull(b);
     }
     
 }

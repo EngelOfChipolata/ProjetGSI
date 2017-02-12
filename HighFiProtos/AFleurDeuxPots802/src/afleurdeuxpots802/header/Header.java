@@ -25,6 +25,7 @@ public class Header extends javax.swing.JPanel {
     private JMenuBar menuBar;
     public final static int ACCUEIL_CLICKED_SIGNAL = 0;
     public final static int ST_VALENTIN_CLICKED_SIGNAL = 1;
+    public final static int PRODUCT_ADDED_SIGNAL = 2;
     
     private final ImageIcon cartFullIcon;
     private final ImageIcon cartEmptyIcon;
@@ -106,6 +107,7 @@ public class Header extends javax.swing.JPanel {
             jLabel2.setIcon(cartEmptyIcon);
         }else{
             jLabel2.setIcon(cartFullIcon);
+            support.firePropertyChange(String.valueOf(PRODUCT_ADDED_SIGNAL), null, null);
         }
     }
     

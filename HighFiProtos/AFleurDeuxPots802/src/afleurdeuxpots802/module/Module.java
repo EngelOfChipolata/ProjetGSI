@@ -31,12 +31,14 @@ public class Module implements Observer{
     private Observable content;
     private Observable panier;
     private Observable commander;
+    private boolean panierFull;
 
     public Module() {
         init();
     }
     
     private void init(){
+        panierFull = false;
         state = State.ACCUEIL;
         accueil = new Accueil();
         content = new Content();
@@ -66,6 +68,9 @@ public class Module implements Observer{
                 break;
             case Header.ACCUEIL_CLICKED_SIGNAL:
                 handleAccueilClicked();
+                break;
+            case Header.PRODUCT_ADDED_SIGNAL:
+                panierFull = true;
                 break;
         }
     }
@@ -98,6 +103,7 @@ public class Module implements Observer{
                 break;
             case ST_VALENTIN:
                 state = State.PANIER;
+                
                 showPanier();
                 break;
             case PANIER:
@@ -158,6 +164,7 @@ public class Module implements Observer{
     }
     
     private void showContent(){
+        ((IFleur2PotsPage) content).setFull(panierFull);
         ((IFleur2PotsPage) accueil).hideWindow();
         ((IFleur2PotsPage) panier).hideWindow();
         ((IFleur2PotsPage) commander).hideWindow();
@@ -165,6 +172,7 @@ public class Module implements Observer{
     }
     
     private void showPanier(){
+        ((IFleur2PotsPage) panier).setFull(panierFull);
         ((IFleur2PotsPage) accueil).hideWindow();
         ((IFleur2PotsPage) content).hideWindow();
         ((IFleur2PotsPage) panier).showWindow();
@@ -172,6 +180,7 @@ public class Module implements Observer{
     }
     
     private void showCommander(){
+        ((IFleur2PotsPage) commander).setFull(panierFull);
         ((IFleur2PotsPage) accueil).hideWindow();
         ((IFleur2PotsPage) content).hideWindow();
         ((IFleur2PotsPage) panier).hideWindow();
@@ -179,6 +188,7 @@ public class Module implements Observer{
     }
     
     private void showAccueil(){
+        ((IFleur2PotsPage) accueil).setFull(panierFull);
         ((IFleur2PotsPage) accueil).showWindow();
         ((IFleur2PotsPage) content).hideWindow();
         ((IFleur2PotsPage) panier).hideWindow();
