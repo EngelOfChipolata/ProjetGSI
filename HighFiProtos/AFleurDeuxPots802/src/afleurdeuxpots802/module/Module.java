@@ -7,6 +7,7 @@ package afleurdeuxpots802.module;
 
 import afleurdeuxpots802.header.Header;
 import afleurdeuxpots802.pages.accueil.Accueil;
+import afleurdeuxpots802.pages.commander.Commander;
 import afleurdeuxpots802.pages.content.Content;
 import afleurdeuxpots802.pages.panier.Panier;
 import java.util.Observable;
