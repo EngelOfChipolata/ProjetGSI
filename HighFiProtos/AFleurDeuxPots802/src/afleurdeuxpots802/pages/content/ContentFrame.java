@@ -73,6 +73,10 @@ public class ContentFrame extends javax.swing.JFrame implements IHeaderHolder{
     public ContentPanel getContentPanel() {
         return contentPanel1;
     }
+    
+    public void setPanier(String filepath) {
+        header1.setPanier(filepath);
+    }
 
     @Override
     public void addHeaderCallback(String name, PropertyChangeListener li) {
