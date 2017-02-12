@@ -10,6 +10,8 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
@@ -23,16 +25,21 @@ public class Header extends javax.swing.JPanel {
     private JMenuBar menuBar;
     public final static int ACCUEIL_CLICKED_SIGNAL = 0;
     public final static int ST_VALENTIN_CLICKED_SIGNAL = 1;
+    
+    private final ImageIcon cartFullIcon;
+    private final ImageIcon cartEmptyIcon;
     private final PropertyChangeSupport support;
+    private boolean cartFull;
 
     /**
      * Creates new form Header
      */
     public Header() {
         support = new PropertyChangeSupport(this);
-        System.out.println(support);
+        cartFullIcon = new javax.swing.ImageIcon(getClass().getResource("/images/Panie_ plein.png"));
+        cartEmptyIcon = new javax.swing.ImageIcon(getClass().getResource("/images/Panier vide.png"));
         initComponents();
-        
+        setFull(false);
         
         menuBar = new JMenuBar();
         JMenuItem stVal = new JMenuItem("Saint Valentin");
@@ -93,6 +100,18 @@ public class Header extends javax.swing.JPanel {
     public void removePropertyChangeListener(String name, PropertyChangeListener li){
         support.removePropertyChangeListener(name, li);
     }
+    
+    public void setFull(boolean b){
+        if ((cartFull = b) == false){
+            jLabel2.setIcon(cartEmptyIcon);
+        }else{
+            jLabel2.setIcon(cartFullIcon);
+        }
+    }
+    
+    public boolean isFull(){
+        return cartFull;
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -110,10 +129,10 @@ public class Header extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(1360, 440));
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/afleurdeuxpots802/header/AFDP.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/AFDP.png"))); // NOI18N
         jLabel1.setToolTipText("");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/afleurdeuxpots802/header/Panier vide.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Panie_ plein.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
