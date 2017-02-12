@@ -6,11 +6,14 @@
 package afleurdeuxpots802.header;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
+import javax.swing.Box;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JMenu;
@@ -22,13 +25,13 @@ import javax.swing.JMenuItem;
  * @author buisangu
  */
 public class Header extends javax.swing.JPanel {
-    
+
     private JMenuBar menuBar;
     public final static int ACCUEIL_CLICKED_SIGNAL = 0;
     public final static int ST_VALENTIN_CLICKED_SIGNAL = 1;
     public final static int PRODUCT_ADDED_SIGNAL = 2;
     public final static int CART_CLICKED_SIGNAL = 4;
-    
+
     private final ImageIcon cartFullIcon;
     private final ImageIcon cartEmptyIcon;
     private final PropertyChangeSupport support;
@@ -43,12 +46,14 @@ public class Header extends javax.swing.JPanel {
         cartEmptyIcon = new javax.swing.ImageIcon(getClass().getResource("/images/Panier vide.png"));
         initComponents();
         setFull(false);
-        
+
         menuBar = new JMenuBar();
         JMenuItem stVal = new JMenuItem("Saint Valentin");
         stVal.addActionListener((e) -> {
             support.firePropertyChange(String.valueOf(ST_VALENTIN_CLICKED_SIGNAL), null, null);
         });
+        stVal.setForeground(Color.red);
+
         menuBar.add(stVal);
         JMenu cata = new JMenu("Catalogue");
         JMenuItem catarose = new JMenuItem("Roses");
@@ -60,44 +65,70 @@ public class Header extends javax.swing.JPanel {
         cata.add(catalys);
         cata.add(catabonzai);
         menuBar.add(cata);
+        JMenu occas = new JMenu("Occasions");
+        JMenuItem occasamour = new JMenuItem("Amour");
+        JMenuItem occasamitie = new JMenuItem("Amitié");
+        JMenuItem occasfamille = new JMenuItem("Famille");
+        JMenuItem occasdueil = new JMenuItem("Deuil");
+        occas.add(occasamour);
+        occas.add(occasamitie);
+        occas.add(occasfamille);
+        occas.add(occasdueil);
+        menuBar.add(occas);
+        JMenu bonplans = new JMenu("Bons Plans");
+        JMenuItem bonprix = new JMenuItem("Petits prix");
+        JMenuItem bonpromo = new JMenuItem("Promotions");
+        JMenuItem bonjour = new JMenuItem("Bouquet du jour");
+        bonplans.add(bonjour);
+        bonplans.add(bonpromo);
+        bonplans.add(bonprix);
+        menuBar.add(bonplans);
+        JMenuItem pmb = new JMenuItem("Pimp My Bouquet");
+        pmb.setForeground(Color.red);
+        menuBar.add(pmb);
+        menuBar.add(new JMenuItem("S'inscrire"));
+        menuBar.add(new JMenuItem("Se connecter"));
         jPanel1.setLayout(new BorderLayout());
         jPanel1.add(menuBar, BorderLayout.NORTH);
-        
+
         jLabel1.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 support.firePropertyChange(String.valueOf(ACCUEIL_CLICKED_SIGNAL), null, null);
             }
         });
-        
+
     }
-    
+
     public void goToStVal() {
         support.firePropertyChange(String.valueOf(ST_VALENTIN_CLICKED_SIGNAL), null, null);
     }
+
     @Override
-    public void addPropertyChangeListener(String name, PropertyChangeListener li){
+    public void addPropertyChangeListener(String name, PropertyChangeListener li) {
         support.addPropertyChangeListener(name, li);
     }
+
     @Override
-    public void removePropertyChangeListener(PropertyChangeListener li){
+    public void removePropertyChangeListener(PropertyChangeListener li) {
         support.removePropertyChangeListener(li);
     }
+
     @Override
-    public void removePropertyChangeListener(String name, PropertyChangeListener li){
+    public void removePropertyChangeListener(String name, PropertyChangeListener li) {
         support.removePropertyChangeListener(name, li);
     }
-    
-    public void setFull(boolean b){
-        if ((cartFull = b) == false){
+
+    public void setFull(boolean b) {
+        if ((cartFull = b) == false) {
             jLabel2.setIcon(cartEmptyIcon);
-        }else{
+        } else {
             jLabel2.setIcon(cartFullIcon);
             support.firePropertyChange(String.valueOf(PRODUCT_ADDED_SIGNAL), null, null);
         }
     }
-    
-    public boolean isFull(){
+
+    public boolean isFull() {
         return cartFull;
     }
 

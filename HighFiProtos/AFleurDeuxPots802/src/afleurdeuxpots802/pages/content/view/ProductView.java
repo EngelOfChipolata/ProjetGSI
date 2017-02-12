@@ -110,8 +110,6 @@ public class ProductView extends javax.swing.JPanel {
             imgLabel.setText("");
             imgLabel.setIcon(icon);
         }
-        
-        
     }
     
     public void setName(String name) {
