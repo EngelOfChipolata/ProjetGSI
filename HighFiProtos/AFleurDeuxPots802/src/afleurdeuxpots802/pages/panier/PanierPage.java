@@ -160,6 +160,7 @@ public class PanierPage extends javax.swing.JFrame implements IHeaderHolder{
     @Override
     public void setFull(boolean b) {
         header1.setFull(b);
+        jButton1.setEnabled(b);
     }
 
     void setProduct(Product product) {
