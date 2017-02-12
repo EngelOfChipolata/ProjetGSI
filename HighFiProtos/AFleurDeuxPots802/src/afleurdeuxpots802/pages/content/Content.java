@@ -6,7 +6,9 @@
 package afleurdeuxpots802.pages.content;
 
 import afleurdeuxpots802.header.Header;
+import afleurdeuxpots802.model.Product;
 import afleurdeuxpots802.module.IFleur2PotsPage;
+import java.util.ArrayList;
 import java.util.Observable;
 
 /**
@@ -54,6 +56,10 @@ public class Content extends Observable implements IFleur2PotsPage{
     @Override
     public void setFull(boolean b) {
         contentFrame.setFull(b);
+    }
+
+    public ArrayList<Product> getProducts() {
+        return controller.getProducts();
     }
     
 }

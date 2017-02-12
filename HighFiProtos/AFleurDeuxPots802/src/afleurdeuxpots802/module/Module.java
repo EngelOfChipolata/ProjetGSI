@@ -6,6 +6,7 @@
 package afleurdeuxpots802.module;
 
 import afleurdeuxpots802.header.Header;
+import afleurdeuxpots802.model.Product;
 import afleurdeuxpots802.pages.accueil.Accueil;
 import afleurdeuxpots802.pages.commander.Commander;
 import afleurdeuxpots802.pages.content.Content;
@@ -18,6 +19,8 @@ import java.util.Observer;
  * @author buisangu
  */
 public class Module implements Observer{
+    
+    private Product productInCart;
     
     private enum State{
         ACCUEIL,
@@ -48,6 +51,8 @@ public class Module implements Observer{
         content.addObserver(this);
         panier.addObserver(this);
         commander.addObserver(this);
+        productInCart = ((Content)content).getProducts().get(7);
+        
         showAccueil();
     }
     
@@ -71,6 +76,7 @@ public class Module implements Observer{
                 break;
             case Header.PRODUCT_ADDED_SIGNAL:
                 panierFull = true;
+                ((Panier)panier).setProduct(productInCart);
                 break;
         }
     }

@@ -6,6 +6,7 @@
 package afleurdeuxpots802.pages.panier;
 
 import afleurdeuxpots802.header.Header;
+import afleurdeuxpots802.model.Product;
 import afleurdeuxpots802.module.IFleur2PotsPage;
 import java.util.Observable;
 
@@ -17,6 +18,7 @@ public class Panier extends Observable implements IFleur2PotsPage{
     
     private final PanierPage page;
     public static final int COMMANDE_CLICKED_SIGNAL = 3;
+    private Product product;
 
     public Panier() {
         page = new PanierPage();
@@ -30,8 +32,9 @@ public class Panier extends Observable implements IFleur2PotsPage{
         });
         
     }
-    
-    
+    public void setProduct(Product product) {
+        page.setProduct(product);
+    }
 
     @Override
     public void showWindow() {

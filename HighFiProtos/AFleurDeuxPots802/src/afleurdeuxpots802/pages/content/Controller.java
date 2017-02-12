@@ -20,7 +20,6 @@ import java.util.ArrayList;
 public class Controller {
     private State state;
     private final static String PATH_PRODUCTS = "./ressources/products/";
-    private final static String PATH_PANIER_FULL = "./src/afleurdeuxpots802/header/Panie_ plein.png";
     private final int NB_ITEMS_IN_PAGE;
     private final ContentFrame contentFrame;
     private ArrayList<Product> products;
@@ -187,6 +186,10 @@ public class Controller {
             ex.printStackTrace();
         }
     }
+    }
+
+    ArrayList<Product> getProducts() {
+        return products;
     }
     
     
