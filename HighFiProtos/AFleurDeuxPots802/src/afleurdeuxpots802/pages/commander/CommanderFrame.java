@@ -5,11 +5,14 @@
  */
 package afleurdeuxpots802.pages.commander;
 
+import afleurdeuxpots802.header.IHeaderHolder;
+import java.beans.PropertyChangeListener;
+
 /**
  *
  * @author bonnevfa
  */
-public class CommanderFrame extends javax.swing.JFrame {
+public class CommanderFrame extends javax.swing.JFrame implements IHeaderHolder{
 
     /**
      * Creates new form CommanderFrame
@@ -272,4 +275,14 @@ public class CommanderFrame extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void addHeaderCallback(String name, PropertyChangeListener li) {
+        header1.addPropertyChangeListener(name, li);
+    }
+
+    @Override
+    public void removeHeaderCallback(String name, PropertyChangeListener li) {
+        header1.removePropertyChangeListener(name, li);
+    }
 }

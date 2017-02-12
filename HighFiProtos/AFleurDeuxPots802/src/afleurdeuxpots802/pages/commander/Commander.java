@@ -5,6 +5,7 @@
  */
 package afleurdeuxpots802.pages.commander;
 
+import afleurdeuxpots802.header.Header;
 import afleurdeuxpots802.module.IFleur2PotsPage;
 import java.util.Observable;
 
@@ -18,6 +19,10 @@ public class Commander  extends Observable implements IFleur2PotsPage{
 
     public Commander() {
         commanderFrame = new CommanderFrame();
+        commanderFrame.addHeaderCallback(String.valueOf(Header.ACCUEIL_CLICKED_SIGNAL), (evt) -> {
+            setChanged();
+            notifyObservers(Header.ACCUEIL_CLICKED_SIGNAL);
+        });
     }
     
     

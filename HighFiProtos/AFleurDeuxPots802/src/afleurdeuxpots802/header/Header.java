@@ -25,6 +25,7 @@ public class Header extends javax.swing.JPanel {
     private JMenuBar menuBar;
     public final static int ACCUEIL_CLICKED_SIGNAL = 0;
     public final static int ST_VALENTIN_CLICKED_SIGNAL = 1;
+    public final static int PANIER_CLICKED_SIGNAL = 2;
     
     private final ImageIcon cartFullIcon;
     private final ImageIcon cartEmptyIcon;
@@ -64,6 +65,33 @@ public class Header extends javax.swing.JPanel {
             @Override
             public void mouseClicked(MouseEvent e) {
                 support.firePropertyChange(String.valueOf(ACCUEIL_CLICKED_SIGNAL), null, null);
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+                //Rien
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                //Rien
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                //Rien
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                //Rien
+            }
+        });
+        
+        jLabel2.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                support.firePropertyChange(String.valueOf(PANIER_CLICKED_SIGNAL), null, null);
             }
 
             @Override
