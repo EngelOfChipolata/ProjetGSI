@@ -27,6 +27,7 @@ public class Header extends javax.swing.JPanel {
     public final static int ST_VALENTIN_CLICKED_SIGNAL = 1;
     public final static int PRODUCT_ADDED_SIGNAL = 2;
     public final static int CART_CLICKED_SIGNAL = 4;
+    public final static int COMMAND_CLICKED_SIGNAL = 5;
     
     private final ImageIcon cartFullIcon;
     private final ImageIcon cartEmptyIcon;
@@ -94,6 +95,11 @@ public class Header extends javax.swing.JPanel {
     public void goToStVal() {
         support.firePropertyChange(String.valueOf(ST_VALENTIN_CLICKED_SIGNAL), null, null);
     }
+    
+    public void goToCommand() {
+        support.firePropertyChange(String.valueOf(COMMAND_CLICKED_SIGNAL), null, null);
+    }
+    
     @Override
     public void addPropertyChangeListener(String name, PropertyChangeListener li){
         support.addPropertyChangeListener(name, li);

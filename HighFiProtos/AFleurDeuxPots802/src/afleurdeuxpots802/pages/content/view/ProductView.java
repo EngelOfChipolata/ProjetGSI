@@ -27,6 +27,10 @@ public class ProductView extends javax.swing.JPanel {
     public void setController(Controller controller) {
         this.controller = controller;
     }
+    
+    public void hideButton() {
+        addToCartButton.setVisible(false);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.

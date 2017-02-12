@@ -30,6 +30,10 @@ public class Panier extends Observable implements IFleur2PotsPage{
             setChanged();
             notifyObservers(Header.ST_VALENTIN_CLICKED_SIGNAL);
         });
+        page.addHeaderCallback(String.valueOf(Header.COMMAND_CLICKED_SIGNAL), (evt) -> {
+            setChanged();
+            notifyObservers(Header.COMMAND_CLICKED_SIGNAL);
+        });
         
     }
     public void setProduct(Product product) {

@@ -32,7 +32,7 @@ public class AccueilPage extends javax.swing.JFrame implements IHeaderHolder{
 
     @Override
     public void removeHeaderCallback(String name, PropertyChangeListener li) {
-        header1.addPropertyChangeListener(name, li);
+        header1.removePropertyChangeListener(name, li);
     }
 
     @Override

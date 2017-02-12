@@ -68,7 +68,7 @@ public class Module implements Observer{
            case Header.CART_CLICKED_SIGNAL:
                 handlePanierClicked();
                 break;
-            case Panier.COMMANDE_CLICKED_SIGNAL:
+            case Header.COMMAND_CLICKED_SIGNAL:
                 handleCommanderClicked();
                 break;
             case Header.ACCUEIL_CLICKED_SIGNAL:
