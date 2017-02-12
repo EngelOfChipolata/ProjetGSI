@@ -18,6 +18,7 @@ public class Commander  extends Observable implements IFleur2PotsPage{
 
     public Commander() {
         commanderFrame = new CommanderFrame();
+        commanderFrame.setPanier("./src/afleurdeuxpots802/header/Panie_ plein.png");
     }
     
     

@@ -10,6 +10,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
+import javax.swing.ImageIcon;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
@@ -92,6 +93,11 @@ public class Header extends javax.swing.JPanel {
     @Override
     public void removePropertyChangeListener(String name, PropertyChangeListener li){
         support.removePropertyChangeListener(name, li);
+    }
+    
+    public void setPanier(String filepath) {
+        ImageIcon icon = new ImageIcon(filepath);
+        jLabel2.setIcon(icon);
     }
 
     /**
