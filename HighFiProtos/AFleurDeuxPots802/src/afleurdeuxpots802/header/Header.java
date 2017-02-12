@@ -90,6 +90,10 @@ public class Header extends javax.swing.JPanel {
         });
         
     }
+    
+    public void goToStVal() {
+        support.firePropertyChange(String.valueOf(ST_VALENTIN_CLICKED_SIGNAL), null, null);
+    }
     @Override
     public void addPropertyChangeListener(String name, PropertyChangeListener li){
         support.addPropertyChangeListener(name, li);

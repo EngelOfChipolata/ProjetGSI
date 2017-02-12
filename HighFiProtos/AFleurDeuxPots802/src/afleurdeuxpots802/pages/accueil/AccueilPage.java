@@ -137,6 +137,11 @@ public class AccueilPage extends javax.swing.JFrame implements IHeaderHolder{
         });
 
         imageRuban.setText("Image");
+        imageRuban.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                imageRubanMouseClicked(evt);
+            }
+        });
 
         bouttonRuban1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -211,24 +216,8 @@ public class AccueilPage extends javax.swing.JFrame implements IHeaderHolder{
     }// </editor-fold>//GEN-END:initComponents
 
     private void bouttonRuban1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bouttonRuban1ActionPerformed
-        switch (state){ //Besoin de state Machine ?
-            case RUBAN_1:
-                state = States.RUBAN_1;
-                forceImage1();
-                break;
-            case RUBAN_2:
-                state = States.RUBAN_1;
-                forceImage1();
-                break;
-            case RUBAN_3:
-                state = States.RUBAN_1;
-                forceImage1();
-                break;
-            case RUBAN_4:
-                state = States.RUBAN_1;
-                forceImage1();
-                break;
-        }
+        state = States.RUBAN_1;
+        forceImage1();
     }//GEN-LAST:event_bouttonRuban1ActionPerformed
 
     private void bouttonRuban2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bouttonRuban2ActionPerformed
@@ -287,6 +276,21 @@ public class AccueilPage extends javax.swing.JFrame implements IHeaderHolder{
                 break;
         }
     }//GEN-LAST:event_buttonPrecedent1ActionPerformed
+
+    private void imageRubanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imageRubanMouseClicked
+        switch (state){
+            case RUBAN_1:
+                header1.goToStVal();
+                break;
+            case RUBAN_2:
+                break;
+            case RUBAN_3:
+                header1.goToStVal();
+                break;
+            case RUBAN_4:
+                break;
+        }
+    }//GEN-LAST:event_imageRubanMouseClicked
 
     private void ActionTimer1() {
         bouttonRuban1.setEnabled(true);
