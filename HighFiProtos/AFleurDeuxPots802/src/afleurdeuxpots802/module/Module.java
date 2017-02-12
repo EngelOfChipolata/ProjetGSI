@@ -75,8 +75,7 @@ public class Module implements Observer{
                 handleAccueilClicked();
                 break;
             case Header.PRODUCT_ADDED_SIGNAL:
-                panierFull = true;
-                ((Panier)panier).setProduct(productInCart);
+                handleProductAdded();
                 break;
         }
     }
@@ -118,7 +117,8 @@ public class Module implements Observer{
                 //Non géré
                 break;
             case COMMANDES:
-                // Non géré
+                state = State.PANIER;
+                showPanier();
                 break;
             default:
                 throw new AssertionError(state.name());
@@ -135,8 +135,10 @@ public class Module implements Observer{
                 //Interdit
                 break;
             case PANIER:
-                state = State.COMMANDES;
-                showCommander();
+                if (panierFull){
+                    state = State.COMMANDES;
+                    showCommander();
+                }
                 break;
             case COMMANDES:
                 // Interdit
@@ -169,6 +171,29 @@ public class Module implements Observer{
                 throw new AssertionError(state.name());
             
         }
+    }
+    
+    private void handleProductAdded(){
+        switch (state){
+            case ACCUEIL:
+                panierFull = true;
+                ((Panier)panier).setProduct(productInCart);
+                break;
+            case ST_VALENTIN:
+                panierFull = true;
+                ((Panier)panier).setProduct(productInCart);
+                break;
+            case PANIER:
+                //Interdit
+                break;
+            case COMMANDES:
+                //Interdit
+                break;
+            default:
+                throw new AssertionError(state.name());
+            
+        }
+
     }
     
     private void showContent(){
