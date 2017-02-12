@@ -21,9 +21,11 @@ public class Panier extends Observable implements IFleur2PotsPage{
     public Panier() {
         page = new PanierPage();
         page.addHeaderCallback(String.valueOf(Header.ACCUEIL_CLICKED_SIGNAL), (evt) -> {
+            setChanged();
             notifyObservers(Header.ACCUEIL_CLICKED_SIGNAL);
         });
         page.addHeaderCallback(String.valueOf(Header.ST_VALENTIN_CLICKED_SIGNAL), (evt) -> {
+            setChanged();
             notifyObservers(Header.ST_VALENTIN_CLICKED_SIGNAL);
         });
     }

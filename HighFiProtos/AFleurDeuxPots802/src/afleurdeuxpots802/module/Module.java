@@ -53,11 +53,13 @@ public class Module implements Observer{
 
     @Override
     public void update(Observable o, Object arg) {
+        System.out.println("Update !");
         int event = (int) arg;
         switch (event){
-            /*case ST_VALENTIN_CLICKED:
-                handleStValentinClicked();
-                break;*/
+            case Header.ST_VALENTIN_CLICKED_SIGNAL:
+                System.out.println("StValclicked");
+                handleContentClicked();
+                break;
             /*case PANIER_CLICKED:
                 handlePanierClicked();
                 break;*/
