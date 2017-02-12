@@ -6,13 +6,14 @@
 package afleurdeuxpots802.pages.panier;
 
 import afleurdeuxpots802.header.Header;
+import afleurdeuxpots802.header.IHeaderHolder;
 import java.beans.PropertyChangeListener;
 
 /**
  *
  * @author guilhem
  */
-public class PanierPage extends javax.swing.JFrame {
+public class PanierPage extends javax.swing.JFrame implements IHeaderHolder{
 
     /**
      * Creates new form PanierPage
@@ -21,10 +22,12 @@ public class PanierPage extends javax.swing.JFrame {
         initComponents();
     }
     
+    @Override
     public void addHeaderCallback(String name, PropertyChangeListener li){
         header1.addPropertyChangeListener(name, li);
     }
     
+    @Override
     public void removeHeaderCallback(String name, PropertyChangeListener li){
         header1.removePropertyChangeListener(name, li);
     }

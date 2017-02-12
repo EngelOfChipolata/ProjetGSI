@@ -5,9 +5,11 @@
  */
 package afleurdeuxpots802.pages.accueil;
 
+import afleurdeuxpots802.header.IHeaderHolder;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
+import java.beans.PropertyChangeListener;
 import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -21,7 +23,17 @@ import javax.swing.Timer;
  *
  * @author desertle
  */
-public class AccueilPage extends javax.swing.JFrame {
+public class AccueilPage extends javax.swing.JFrame implements IHeaderHolder{
+
+    @Override
+    public void addHeaderCallback(String name, PropertyChangeListener li) {
+        header1.addPropertyChangeListener(name, li);
+    }
+
+    @Override
+    public void removeHeaderCallback(String name, PropertyChangeListener li) {
+        header1.addPropertyChangeListener(name, li);
+    }
 
     /**
      * Creates new form AcceuilPage
@@ -41,6 +53,7 @@ public class AccueilPage extends javax.swing.JFrame {
         initComponents();
         init();
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -100,6 +113,7 @@ public class AccueilPage extends javax.swing.JFrame {
         bouttonRuban2 = new javax.swing.JButton();
         bouttonRuban3 = new javax.swing.JButton();
         bouttonRuban4 = new javax.swing.JButton();
+        header1 = new afleurdeuxpots802.header.Header();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -154,7 +168,7 @@ public class AccueilPage extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(buttonPrecedent1))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(659, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(bouttonRuban1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(bouttonRuban2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -163,11 +177,15 @@ public class AccueilPage extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(bouttonRuban4, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(316, 316, 316))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(header1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(94, 94, 94)
+                .addComponent(header1, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -181,7 +199,7 @@ public class AccueilPage extends javax.swing.JFrame {
                                 .addComponent(bouttonRuban3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(bouttonRuban4, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(bouttonRuban2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(466, Short.MAX_VALUE))
+                .addContainerGap(351, Short.MAX_VALUE))
         );
 
         pack();
@@ -340,6 +358,7 @@ public class AccueilPage extends javax.swing.JFrame {
     private javax.swing.JButton bouttonRuban4;
     private javax.swing.JButton buttonPrecedent;
     private javax.swing.JButton buttonPrecedent1;
+    private afleurdeuxpots802.header.Header header1;
     private javax.swing.JLabel imageRuban;
     // End of variables declaration//GEN-END:variables
 }

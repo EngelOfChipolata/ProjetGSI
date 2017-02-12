@@ -5,13 +5,15 @@
  */
 package afleurdeuxpots802.pages.content;
 
+import afleurdeuxpots802.header.IHeaderHolder;
 import afleurdeuxpots802.pages.content.view.ContentPanel;
+import java.beans.PropertyChangeListener;
 
 /**
  *
  * @author bonnevfa
  */
-public class ContentFrame extends javax.swing.JFrame {
+public class ContentFrame extends javax.swing.JFrame implements IHeaderHolder{
 
     /**
      * Creates new form ContentFrame
@@ -58,40 +60,6 @@ public class ContentFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ContentFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ContentFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ContentFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ContentFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new ContentFrame().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private afleurdeuxpots802.pages.content.view.ContentPanel contentPanel1;
@@ -104,6 +72,16 @@ public class ContentFrame extends javax.swing.JFrame {
 
     public ContentPanel getContentPanel() {
         return contentPanel1;
+    }
+
+    @Override
+    public void addHeaderCallback(String name, PropertyChangeListener li) {
+        header1.addPropertyChangeListener(name, li);
+    }
+
+    @Override
+    public void removeHeaderCallback(String name, PropertyChangeListener li) {
+        header1.removePropertyChangeListener(name, li);
     }
     
     

@@ -5,6 +5,7 @@
  */
 package afleurdeuxpots802.pages.accueil;
 
+import afleurdeuxpots802.header.Header;
 import afleurdeuxpots802.module.IFleur2PotsPage;
 import java.util.Observable;
 
@@ -18,6 +19,14 @@ public class Accueil extends Observable implements IFleur2PotsPage {
 
     public Accueil() {
         accueilPage = new AccueilPage();
+        accueilPage.addHeaderCallback(String.valueOf(Header.ACCUEIL_CLICKED_SIGNAL), (evt) -> {
+            setChanged();
+            notifyObservers(Header.ACCUEIL_CLICKED_SIGNAL);
+        });
+        accueilPage.addHeaderCallback(String.valueOf(Header.ST_VALENTIN_CLICKED_SIGNAL), (evt) -> {
+            setChanged();
+            notifyObservers(Header.ST_VALENTIN_CLICKED_SIGNAL);
+        });
     }
     
     @Override
