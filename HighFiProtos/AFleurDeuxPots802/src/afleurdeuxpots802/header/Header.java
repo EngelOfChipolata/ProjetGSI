@@ -6,6 +6,7 @@
 package afleurdeuxpots802.header;
 
 import java.awt.BorderLayout;
+import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.beans.PropertyChangeListener;
@@ -62,30 +63,10 @@ public class Header extends javax.swing.JPanel {
         jPanel1.setLayout(new BorderLayout());
         jPanel1.add(menuBar, BorderLayout.NORTH);
         
-        jLabel1.addMouseListener(new MouseListener() {
+        jLabel1.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 support.firePropertyChange(String.valueOf(ACCUEIL_CLICKED_SIGNAL), null, null);
-            }
-
-            @Override
-            public void mousePressed(MouseEvent e) {
-                //Rien
-            }
-
-            @Override
-            public void mouseReleased(MouseEvent e) {
-                //Rien
-            }
-
-            @Override
-            public void mouseEntered(MouseEvent e) {
-                //Rien
-            }
-
-            @Override
-            public void mouseExited(MouseEvent e) {
-                //Rien
             }
         });
         
