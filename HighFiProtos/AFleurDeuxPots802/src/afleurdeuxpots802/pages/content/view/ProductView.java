@@ -100,7 +100,9 @@ public class ProductView extends javax.swing.JPanel {
 
     private void addToCartButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addToCartButtonActionPerformed
         ViewEvent viewEvent = new ViewEvent(ViewEventType.ADD_TO_CART, no);
-        controller.handleEvent(viewEvent);
+        try {
+            controller.handleEvent(viewEvent);
+        } catch (NullPointerException e) {}
     }//GEN-LAST:event_addToCartButtonActionPerformed
 
     public void setImage(String path) {
