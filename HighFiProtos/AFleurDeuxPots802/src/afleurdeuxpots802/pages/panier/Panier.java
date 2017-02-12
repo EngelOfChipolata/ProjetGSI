@@ -41,5 +41,10 @@ public class Panier extends Observable implements IFleur2PotsPage{
     public void hideWindow() {
         page.setVisible(false);
     }
+
+    @Override
+    public void setFull(boolean b) {
+        page.setFull(b);
+    }
     
 }

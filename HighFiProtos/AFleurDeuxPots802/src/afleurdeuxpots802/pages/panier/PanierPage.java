@@ -118,4 +118,9 @@ public class PanierPage extends javax.swing.JFrame implements IHeaderHolder{
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void setFull(boolean b) {
+        header1.setFull(b);
+    }
 }
