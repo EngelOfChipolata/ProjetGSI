@@ -5,7 +5,9 @@
  */
 package afleurdeuxpots802.pages.content;
 
+import afleurdeuxpots802.header.Header;
 import afleurdeuxpots802.module.IFleur2PotsPage;
+import com.sun.jndi.toolkit.ctx.HeadTail;
 import java.util.Observable;
 
 /**
@@ -21,6 +23,15 @@ public class Content extends Observable implements IFleur2PotsPage{
         controller = new Controller(contentFrame.getContentPanel());
         contentFrame.setController(controller);
         controller.initState();
+        
+        contentFrame.addHeaderCallback(String.valueOf(Header.ACCUEIL_CLICKED_SIGNAL), (evt) -> {
+            setChanged();
+            notifyObservers(Header.ACCUEIL_CLICKED_SIGNAL);
+        });
+        contentFrame.addHeaderCallback(String.valueOf(Header.ST_VALENTIN_CLICKED_SIGNAL), (evt) -> {
+            setChanged();
+            notifyObservers(Header.ST_VALENTIN_CLICKED_SIGNAL);
+        });
     }
     
     @Override
