@@ -23,6 +23,10 @@ public class Commander  extends Observable implements IFleur2PotsPage{
             setChanged();
             notifyObservers(Header.ACCUEIL_CLICKED_SIGNAL);
         });
+        commanderFrame.addHeaderCallback(String.valueOf(Header.CART_CLICKED_SIGNAL), (evt) -> {
+            setChanged();
+            notifyObservers(Header.CART_CLICKED_SIGNAL);
+        });
         commanderFrame.setFull(true);
     }
     

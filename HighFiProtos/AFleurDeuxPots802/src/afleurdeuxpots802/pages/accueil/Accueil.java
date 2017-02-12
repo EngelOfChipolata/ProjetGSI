@@ -27,6 +27,10 @@ public class Accueil extends Observable implements IFleur2PotsPage {
             setChanged();
             notifyObservers(Header.ST_VALENTIN_CLICKED_SIGNAL);
         });
+        accueilPage.addHeaderCallback(String.valueOf(Header.CART_CLICKED_SIGNAL), (evt) -> {
+            setChanged();
+            notifyObservers(Header.CART_CLICKED_SIGNAL);
+        });
     }
     
     @Override

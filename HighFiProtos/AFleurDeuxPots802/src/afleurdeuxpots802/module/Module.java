@@ -60,9 +60,9 @@ public class Module implements Observer{
             case Header.ST_VALENTIN_CLICKED_SIGNAL:
                 handleContentClicked();
                 break;
-            /*case PANIER_CLICKED:
+           case Header.CART_CLICKED_SIGNAL:
                 handlePanierClicked();
-                break;*/
+                break;
             case Panier.COMMANDE_CLICKED_SIGNAL:
                 handleCommanderClicked();
                 break;
@@ -85,10 +85,12 @@ public class Module implements Observer{
                 //Non géré
                 break;
             case PANIER:
-                //Non géré
+                state = State.ST_VALENTIN;
+                showContent();
                 break;
             case COMMANDES:
-                // Non géré
+                state = State.ST_VALENTIN;
+                showContent();
                 break;
             default:
                 throw new AssertionError(state.name());
@@ -99,11 +101,11 @@ public class Module implements Observer{
     private void handlePanierClicked(){
             switch (state){
             case ACCUEIL:
-                //Non géré
+                state = State.PANIER;
+                showPanier();
                 break;
             case ST_VALENTIN:
                 state = State.PANIER;
-                
                 showPanier();
                 break;
             case PANIER:

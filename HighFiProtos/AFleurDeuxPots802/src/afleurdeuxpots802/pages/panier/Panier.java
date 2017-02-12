@@ -28,6 +28,7 @@ public class Panier extends Observable implements IFleur2PotsPage{
             setChanged();
             notifyObservers(Header.ST_VALENTIN_CLICKED_SIGNAL);
         });
+        
     }
     
     
