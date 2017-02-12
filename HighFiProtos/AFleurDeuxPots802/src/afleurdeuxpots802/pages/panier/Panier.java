@@ -5,6 +5,7 @@
  */
 package afleurdeuxpots802.pages.panier;
 
+import afleurdeuxpots802.header.Header;
 import afleurdeuxpots802.module.IFleur2PotsPage;
 import java.util.Observable;
 
@@ -19,6 +20,12 @@ public class Panier extends Observable implements IFleur2PotsPage{
 
     public Panier() {
         page = new PanierPage();
+        page.addHeaderCallback(String.valueOf(Header.ACCUEIL_CLICKED_SIGNAL), (evt) -> {
+            notifyObservers(Header.ACCUEIL_CLICKED_SIGNAL);
+        });
+        page.addHeaderCallback(String.valueOf(Header.ST_VALENTIN_CLICKED_SIGNAL), (evt) -> {
+            notifyObservers(Header.ST_VALENTIN_CLICKED_SIGNAL);
+        });
     }
     
     

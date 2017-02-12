@@ -6,6 +6,10 @@
 package afleurdeuxpots802.header;
 
 import java.awt.BorderLayout;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeSupport;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
@@ -19,14 +23,22 @@ public class Header extends javax.swing.JPanel {
     private JMenuBar menuBar;
     public final static int ACCUEIL_CLICKED_SIGNAL = 0;
     public final static int ST_VALENTIN_CLICKED_SIGNAL = 1;
+    private final PropertyChangeSupport support;
 
     /**
      * Creates new form Header
      */
     public Header() {
+        support = new PropertyChangeSupport(this);
+        System.out.println(support);
         initComponents();
+        
+        
         menuBar = new JMenuBar();
         JMenuItem stVal = new JMenuItem("Saint Valentin");
+        stVal.addActionListener((e) -> {
+            support.firePropertyChange(String.valueOf(ST_VALENTIN_CLICKED_SIGNAL), null, null);
+        });
         menuBar.add(stVal);
         JMenu cata = new JMenu("Catalogue");
         JMenuItem catarose = new JMenuItem("Roses");
@@ -41,7 +53,45 @@ public class Header extends javax.swing.JPanel {
         jPanel1.setLayout(new BorderLayout());
         jPanel1.add(menuBar, BorderLayout.NORTH);
         
+        jLabel1.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                support.firePropertyChange(String.valueOf(ACCUEIL_CLICKED_SIGNAL), null, null);
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+                //Rien
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                //Rien
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                //Rien
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                //Rien
+            }
+        });
         
+    }
+    @Override
+    public void addPropertyChangeListener(String name, PropertyChangeListener li){
+        support.addPropertyChangeListener(name, li);
+    }
+    @Override
+    public void removePropertyChangeListener(PropertyChangeListener li){
+        support.removePropertyChangeListener(li);
+    }
+    @Override
+    public void removePropertyChangeListener(String name, PropertyChangeListener li){
+        support.removePropertyChangeListener(name, li);
     }
 
     /**
@@ -73,7 +123,7 @@ public class Header extends javax.swing.JPanel {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 27, Short.MAX_VALUE)
+            .addGap(0, 23, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -93,7 +143,7 @@ public class Header extends javax.swing.JPanel {
                     .addComponent(jLabel1)
                     .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
