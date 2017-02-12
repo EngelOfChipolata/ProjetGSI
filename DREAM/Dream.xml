@@ -360,10 +360,10 @@
             </criteria>
             <criteria id="c33"/>
             <criteria id="c34">
-                <itemCriteria label="Efficiency" weight="3" session="s2"/>
+                <itemCriteria label="Efficiency" weight="1" session="s2"/>
             </criteria>
             <criteria id="c35">
-                <itemCriteria label="effectiveness" weight="3" session="s2"/>
+                <itemCriteria label="effectiveness" weight="1" session="s2"/>
             </criteria>
             <criteria id="c36">
                 <itemCriteria label="Gain de place" weight="3" session="s2"/>
@@ -375,14 +375,14 @@
                 <itemCriteria label="Composition" weight="3" session="s2"/>
             </criteria>
             <criteria id="c39">
-                <itemCriteria label="Non intrusif" weight="3" session="s2"/>
+                <itemCriteria label="Non intrusif" weight="2" session="s2"/>
             </criteria>
             <criteria id="c40">
-                <itemCriteria label="Discret" weight="3" session="s2"/>
+                <itemCriteria label="Discret" weight="2" session="s2"/>
             </criteria>
             <criteria id="c41"/>
             <criteria id="c42">
-                <itemCriteria label="Redondance" weight="3" session="s2"/>
+                <itemCriteria label="Redondance" weight="2" session="s2"/>
             </criteria>
             <criteria id="c43">
                 <itemCriteria
@@ -400,7 +400,19 @@
                 <itemCriteria label="Estétique" weight="3" session="s2"/>
             </criteria>
             <scenario id="e1"/>
+            <scenario id="e2">
+                <itemScenario label="Scénario 1" session="s2"/>
+            </scenario>
+            <scenario id="e3">
+                <itemScenario label="Scénario 1 et 2" session="s2"/>
+            </scenario>
+            <scenario id="e4">
+                <itemScenario label="Scénario 3" session="s2"/>
+            </scenario>
             <taskModel id="t1"/>
+            <taskModel id="t2">
+                <itemTaskModel label="Créer un bouquet personnalisé" session="s2"/>
+            </taskModel>
             <argument id="g1"/>
             <argument id="g2">
                 <itemArgument label="Prototype basse fidélité 1" session="s2"/>
@@ -858,7 +870,7 @@
         </position>
         <position id="p123" idref="o45">
             <itemPosition posX="2015" posY="3133" width="90" height="90"
-                session="s2" selected="false"/>
+                session="s2" selected="true"/>
         </position>
         <position id="p124" idref="o46"/>
         <position id="p125" idref="c40">
@@ -926,6 +938,30 @@
         </position>
         <position id="p143" idref="q22">
             <itemPosition posX="471" posY="3312" width="90" height="90"
+                session="s2" selected="false"/>
+        </position>
+        <position id="p144" idref="e2">
+            <itemPosition posX="1420" posY="3453" width="90" height="90"
+                session="s2" selected="false"/>
+        </position>
+        <position id="p145" idref="e3">
+            <itemPosition posX="2324" posY="3503" width="90" height="90"
+                session="s2" selected="false"/>
+        </position>
+        <position id="p146" idref="e4">
+            <itemPosition posX="2495" posY="3245" width="90" height="90"
+                session="s2" selected="false"/>
+        </position>
+        <position id="p147" idref="t2">
+            <itemPosition posX="936" posY="961" width="90" height="90"
+                session="s2" selected="false"/>
+        </position>
+        <position id="p148" idref="t2">
+            <itemPosition posX="1026" posY="316" width="90" height="90"
+                session="s2" selected="false"/>
+        </position>
+        <position id="p149" idref="t2">
+            <itemPosition posX="1386" posY="46" width="90" height="90"
                 session="s2" selected="false"/>
         </position>
     </nodes>
@@ -1821,6 +1857,31 @@
             <itemLink from="p139" to="p142" value="3" session="s2">
                 <blackBox posX="2101" posY="1425" width="5" height="5"/>
             </itemLink>
+        </link>
+        <link id="l209"/>
+        <link id="l210"/>
+        <link id="l211">
+            <itemLink from="p144" to="p104" value="0" session="s2"/>
+        </link>
+        <link id="l212">
+            <itemLink from="p145" to="p133" value="0" session="s2"/>
+        </link>
+        <link id="l213">
+            <itemLink from="p145" to="p134" value="0" session="s2"/>
+        </link>
+        <link id="l214"/>
+        <link id="l215">
+            <itemLink from="p146" to="p127" value="0" session="s2"/>
+        </link>
+        <link id="l216"/>
+        <link id="l217">
+            <itemLink from="p52" to="p147" value="0" session="s2"/>
+        </link>
+        <link id="l218">
+            <itemLink from="p47" to="p148" value="0" session="s2"/>
+        </link>
+        <link id="l219">
+            <itemLink from="p41" to="p149" value="0" session="s2"/>
         </link>
     </links>
     <authors>
