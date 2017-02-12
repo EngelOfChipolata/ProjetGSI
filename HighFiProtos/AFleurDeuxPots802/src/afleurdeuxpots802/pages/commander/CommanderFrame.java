@@ -164,8 +164,8 @@ public class CommanderFrame extends javax.swing.JFrame implements IHeaderHolder{
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(header1, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(241, 241, 241)
+                .addComponent(header1, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel5)
@@ -209,7 +209,7 @@ public class CommanderFrame extends javax.swing.JFrame implements IHeaderHolder{
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(147, 147, 147))
+                .addContainerGap())
         );
 
         pack();
@@ -248,6 +248,10 @@ public class CommanderFrame extends javax.swing.JFrame implements IHeaderHolder{
                 new CommanderFrame().setVisible(true);
             }
         });
+    }
+    
+    public void setFull(boolean b) {
+        header1.setFull(b);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

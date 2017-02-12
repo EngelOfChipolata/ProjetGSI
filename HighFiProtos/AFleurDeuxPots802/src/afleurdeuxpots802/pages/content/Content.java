@@ -7,7 +7,6 @@ package afleurdeuxpots802.pages.content;
 
 import afleurdeuxpots802.header.Header;
 import afleurdeuxpots802.module.IFleur2PotsPage;
-import com.sun.jndi.toolkit.ctx.HeadTail;
 import java.util.Observable;
 
 /**
@@ -20,7 +19,7 @@ public class Content extends Observable implements IFleur2PotsPage{
     
     public Content() {
         contentFrame = new ContentFrame();
-        controller = new Controller(contentFrame.getContentPanel());
+        controller = new Controller(contentFrame);
         contentFrame.setController(controller);
         controller.initState();
         

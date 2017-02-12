@@ -73,6 +73,10 @@ public class ContentFrame extends javax.swing.JFrame implements IHeaderHolder{
     public ContentPanel getContentPanel() {
         return contentPanel1;
     }
+    
+    public void setPanier(boolean b) {
+        header1.setFull(b);
+    }
 
     @Override
     public void addHeaderCallback(String name, PropertyChangeListener li) {
@@ -82,6 +86,10 @@ public class ContentFrame extends javax.swing.JFrame implements IHeaderHolder{
     @Override
     public void removeHeaderCallback(String name, PropertyChangeListener li) {
         header1.removePropertyChangeListener(name, li);
+    }
+
+    void setFull(boolean b) {
+        header1.setFull(b);
     }
     
     
