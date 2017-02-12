@@ -78,7 +78,7 @@ public class Controller {
                 int productNo = viewEvent.getProductNo();
                 System.out.println(productNo);
                 if(productNo == 7) {
-                    contentFrame.setPanier(PATH_PANIER_FULL);
+                    contentFrame.setFull(true);
                 }
                 break;
             case CHANGE_NB:

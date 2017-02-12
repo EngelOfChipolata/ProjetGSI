@@ -45,7 +45,7 @@ public class Module implements Observer{
         accueil.addObserver(this);
         content.addObserver(this);
         panier.addObserver(this);
-        //commander.addObserver(this);
+        commander.addObserver(this);
         showAccueil();
     }
     
@@ -53,11 +53,9 @@ public class Module implements Observer{
 
     @Override
     public void update(Observable o, Object arg) {
-        System.out.println("Update !");
         int event = (int) arg;
         switch (event){
             case Header.ST_VALENTIN_CLICKED_SIGNAL:
-                System.out.println("StValclicked");
                 handleContentClicked();
                 break;
             /*case PANIER_CLICKED:

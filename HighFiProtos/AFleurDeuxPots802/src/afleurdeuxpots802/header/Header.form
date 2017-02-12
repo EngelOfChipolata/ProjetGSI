@@ -47,7 +47,7 @@
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/afleurdeuxpots802/header/AFDP.png"/>
+          <Image iconType="3" name="/images/AFDP.png"/>
         </Property>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
@@ -55,7 +55,7 @@
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/afleurdeuxpots802/header/Panier vide.png"/>
+          <Image iconType="3" name="/images/Panie_ plein.png"/>
         </Property>
       </Properties>
     </Component>
