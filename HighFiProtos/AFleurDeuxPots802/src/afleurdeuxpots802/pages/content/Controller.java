@@ -161,7 +161,6 @@ public class Controller {
                 continue;
             }
             String path = PATH_PRODUCTS + params[0];
-            System.out.println(path);
             String name = params[1];
             double price = Double.parseDouble(params[2]);
             products.add(new Product(path, name, price));

@@ -31,10 +31,10 @@ public class AccueilPage extends javax.swing.JFrame {
     };
     private States state;
     private Timer timerRuban;
-    private static final String PATH_IMG1 = "/src/images/valentine.jpg";
-    private static final String PATH_IMG2 = "/src/images/pimpMyBouquet.png";
-    private static final String PATH_IMG3 = "/src/images/fleurRandom.png";
-    private static final String PATH_IMG4 = "/src/images/Bouquet.jpg";
+    private static final String PATH_IMG1 = "./src/images/valentine.jpg";
+    private static final String PATH_IMG2 = "./src/images/pimpMyBouquet.png";
+    private static final String PATH_IMG3 = "./src/images/fleurRandom.png";
+    private static final String PATH_IMG4 = "./src/images/Bouquet.jpg";
     private BufferedImage img;
 
     public AccueilPage() {
@@ -77,28 +77,16 @@ public class AccueilPage extends javax.swing.JFrame {
         bouttonRuban2.setEnabled(true);
         bouttonRuban3.setEnabled(true);
         bouttonRuban4.setEnabled(true);
-
-        try {   
-            img = ImageIO.read(new File(PATH_IMG1));
-            ImageIcon icon = new ImageIcon(img);
-            imageRuban = new JLabel(icon);
-            //JOptionPane.showMessageDialog(null, label);
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
+ 
+        updateImage(PATH_IMG1);
 
         timerRuban.start();
     }
 
-    private void updateImage(String filepath) { //http://stackoverflow.com/questions/8333802/displaying-an-image-in-java-swing
-        try {   
-            img = ImageIO.read(new File(filepath));
-            ImageIcon icon = new ImageIcon(img);
-            imageRuban = new JLabel(icon);
-            //JOptionPane.showMessageDialog(null, label);
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
+    private void updateImage(String filepath) {
+        ImageIcon icon = new ImageIcon(filepath);
+        imageRuban.setText("");
+        imageRuban.setIcon(icon);
     }
 
     @SuppressWarnings("unchecked")

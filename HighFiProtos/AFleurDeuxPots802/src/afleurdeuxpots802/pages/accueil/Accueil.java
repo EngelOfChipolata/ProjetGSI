@@ -14,14 +14,20 @@ import java.util.Observable;
  */
 public class Accueil extends Observable implements IFleur2PotsPage {
 
+    private AccueilPage accueilPage;
+
+    public Accueil() {
+        accueilPage = new AccueilPage();
+    }
+    
     @Override
     public void showWindow() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        accueilPage.setVisible(true);
     }
 
     @Override
     public void hideWindow() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        accueilPage.setVisible(false);
     }
     
 }

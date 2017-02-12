@@ -40,7 +40,7 @@ public class Module implements Observer{
         accueil = new Accueil();
         content = new Content();
         panier = new Panier();
-        //commander = new Commander();
+        commander = new Commander();
         accueil.addObserver(this);
         content.addObserver(this);
         panier.addObserver(this);
